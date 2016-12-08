@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "nightmarket",
+      "path": "nightmarket",
+      "folder_exclude_patterns":
+      [
+        ".git"
+      ],
+    },
+  ]
+}
+

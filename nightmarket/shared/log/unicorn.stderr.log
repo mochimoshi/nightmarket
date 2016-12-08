@@ -1,0 +1,47 @@
+I, [2016-12-07T01:18:05.149182 #31997]  INFO -- : Refreshing Gem list
+I, [2016-12-07T01:18:07.249267 #31997]  INFO -- : listening on addr=/home/milktea/public/stanfordnightmarket.org/public/nightmarket/shared/sockets/unicorn.sock fd=11
+I, [2016-12-07T01:18:07.249481 #31997]  INFO -- : worker=0 spawning...
+I, [2016-12-07T01:18:07.251680 #31997]  INFO -- : worker=1 spawning...
+I, [2016-12-07T01:18:07.253295 #31997]  INFO -- : master process ready
+I, [2016-12-07T01:18:07.255931 #32037]  INFO -- : worker=1 spawned pid=32037
+I, [2016-12-07T01:18:07.256115 #32037]  INFO -- : worker=1 ready
+I, [2016-12-07T01:18:07.256704 #32035]  INFO -- : worker=0 spawned pid=32035
+I, [2016-12-07T01:18:07.256868 #32035]  INFO -- : worker=0 ready
+I, [2016-12-07T01:18:26.718229 #31997]  INFO -- : reaped #<Process::Status: pid 32035 exit 0> worker=0
+I, [2016-12-07T01:18:26.718456 #31997]  INFO -- : reaped #<Process::Status: pid 32037 exit 0> worker=1
+I, [2016-12-07T01:18:26.721935 #31997]  INFO -- : master complete
+I, [2016-12-07T01:19:50.764312 #32195]  INFO -- : Refreshing Gem list
+I, [2016-12-07T01:19:52.731863 #32195]  INFO -- : unlinking existing socket=/home/milktea/public/stanfordnightmarket.org/public/nightmarket/shared/sockets/unicorn.sock
+I, [2016-12-07T01:19:52.732154 #32195]  INFO -- : listening on addr=/home/milktea/public/stanfordnightmarket.org/public/nightmarket/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T01:19:52.732331 #32195]  INFO -- : worker=0 spawning...
+I, [2016-12-07T01:19:52.734740 #32195]  INFO -- : worker=1 spawning...
+I, [2016-12-07T01:19:52.736591 #32195]  INFO -- : master process ready
+I, [2016-12-07T01:19:52.742604 #32198]  INFO -- : worker=0 spawned pid=32198
+I, [2016-12-07T01:19:52.742881 #32198]  INFO -- : worker=0 ready
+I, [2016-12-07T01:19:52.745468 #32200]  INFO -- : worker=1 spawned pid=32200
+I, [2016-12-07T01:19:52.745646 #32200]  INFO -- : worker=1 ready
+ArgumentError: Already running on PID:32195 (or pid=/home/milktea/public/stanfordnightmarket.org/public/nightmarket/shared/pids/unicorn.pid is stale)
+  /home/milktea/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /home/milktea/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /home/milktea/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /home/milktea/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /home/milktea/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+ArgumentError: Already running on PID:32195 (or pid=/home/milktea/public/stanfordnightmarket.org/public/nightmarket/shared/pids/unicorn.pid is stale)
+  /home/milktea/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:195:in `pid='
+  /home/milktea/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/lib/unicorn/http_server.rb:127:in `start'
+  /home/milktea/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/unicorn-5.2.0/bin/unicorn:126:in `<top (required)>'
+  /home/milktea/.rbenv/versions/2.3.1/bin/unicorn:23:in `load'
+  /home/milktea/.rbenv/versions/2.3.1/bin/unicorn:23:in `<top (required)>'
+I, [2016-12-07T23:34:39.686299 #32195]  INFO -- : reaped #<Process::Status: pid 32198 exit 0> worker=0
+I, [2016-12-07T23:34:39.686531 #32195]  INFO -- : reaped #<Process::Status: pid 32200 exit 0> worker=1
+I, [2016-12-07T23:34:39.686688 #32195]  INFO -- : master complete
+I, [2016-12-07T23:46:29.145544 #5490]  INFO -- : Refreshing Gem list
+I, [2016-12-07T23:46:31.136890 #5490]  INFO -- : unlinking existing socket=/home/milktea/public/stanfordnightmarket.org/public/nightmarket/shared/sockets/unicorn.sock
+I, [2016-12-07T23:46:31.139092 #5490]  INFO -- : listening on addr=/home/milktea/public/stanfordnightmarket.org/public/nightmarket/shared/sockets/unicorn.sock fd=12
+I, [2016-12-07T23:46:31.139248 #5490]  INFO -- : worker=0 spawning...
+I, [2016-12-07T23:46:31.140856 #5490]  INFO -- : worker=1 spawning...
+I, [2016-12-07T23:46:31.141821 #5490]  INFO -- : master process ready
+I, [2016-12-07T23:46:31.147685 #5493]  INFO -- : worker=0 spawned pid=5493
+I, [2016-12-07T23:46:31.148104 #5493]  INFO -- : worker=0 ready
+I, [2016-12-07T23:46:31.150436 #5495]  INFO -- : worker=1 spawned pid=5495
+I, [2016-12-07T23:46:31.150600 #5495]  INFO -- : worker=1 ready
