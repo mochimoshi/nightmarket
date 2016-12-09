@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nightmarket</title>
+    <title><%= @title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:400,400i,600" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render partial: "shared/nav" %>
     <%= yield %>
   </body>
 </html>

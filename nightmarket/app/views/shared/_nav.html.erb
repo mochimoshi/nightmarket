@@ -1,0 +1,18 @@
+<nav class="navbar navbar-dark bg-inverse navbar-fixed-top" role="navigation">
+  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+  <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+    <%= link_to "Stanford Night Market", { controller: "visit", action: "index"}, { class: "navbar-brand" }%>
+
+    <ul class="nav navbar-nav">
+        <li class="nav-item"><%= link_to "News", { controller: "visit", action: "news"}, { class: "nav-link" } %></li>
+        <li class="nav-item"><%= link_to "Directions", { controller: "visit", action: "directions"}, { class: "nav-link" } %></li>
+        <li class="nav-item"><%= link_to "Tickets", { controller: "visit", action: "tickets"}, { class: "nav-link" } %></li>
+        <li class="nav-item"><%= link_to 'Photos', { controller: "visit", action: "photos"}, { class: "nav-link" } %></li>
+        <li class="nav-item"><%= link_to "Menu and schedule", { controller: "visit", action: "schedule"}, { class: "nav-link" } %></li>
+        <li class="nav-item"><%= link_to "About us", { controller: "visit", action: "about"}, { class: "nav-link" } %></li>
+      </ul>
+      <ul class="nav navbar-nav float-xs-right">
+        <li class="nav-item"><%= link_to "Log in", { controller: "admin", action: "login"}, { class: "nav-link" } %></li>
+      </ul>
+  </div>
+</nav>
