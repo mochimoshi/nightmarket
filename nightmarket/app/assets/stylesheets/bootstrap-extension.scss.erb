@@ -1,0 +1,68 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	@extend html;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+}
+
+hr {
+	border-width: 3px;
+	max-width: 50px;
+}
+
+/* Line colors */
+hr.red {
+	border-color: #F05F40;
+}
+
+hr.golden {
+	border-color: #ffcc33;
+}
+
+hr.light {
+	border-color: #ddd;
+}
+
+header {
+	height: 100%;
+	min-height: 100%;
+	color: #fff;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	width: 100%;
+
+	.header-content {
+		position: absolute;
+		top: 40%;
+		width: 100%
+	}
+}
+
+.centered-text {
+	text-align: center
+}
+
+/* Header Images */
+header.home {
+	background-image: url(<%= asset_data_uri 'header/2015_nightmarket_wushu_l.jpg' %>);
+}
+
+section {
+	padding-top: 64px;
+	padding-bottom: 64px;
+}
+
+/* Section Themes */
+section#home-introduction {
+	background-color: #222;
+	color: #fff;
+}
