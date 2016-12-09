@@ -1,13 +1,13 @@
 *.rbc
 capybara-*.html
 .rspec
-/log
-/tmp
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/public/system
-/coverage/
-/spec/tmp
+nightmarket/log
+nightmarket/tmp
+nightmarket/db/*.sqlite3
+nightmarket/db/*.sqlite3-journal
+nightmarket/public/system
+nightmarket/coverage/
+nightmarket/spec/tmp
 **.orig
 rerun.txt
 pickle-email-*.html
@@ -19,10 +19,11 @@ config/secrets.yml
 # dotenv
 # TODO Comment out this rule if environment variables can be committed
 .env
+/nightmarket/.rbenv-vars
 
 ## Environment normalization:
-/.bundle
-/vendor/bundle
+nightmarket/.bundle
+nightmarket/vendor/bundle
 
 # these should all be checked in to normalize the environment:
 # Gemfile.lock, .ruby-version, .ruby-gemset
