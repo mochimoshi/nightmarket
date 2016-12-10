@@ -1,10 +1,13 @@
 <% @title = "2017 Stanford Night Market" %>
-<header class="home">
+<header id="home">
 	<div class="header-content">
-		<p><%= image_tag "night_market_logo.png", alt: "Stanford Night Market Logo"%></p>
+		<p><%= image_tag "night_market_logo.png", class: "img-fluid", alt: "Stanford Night Market Logo"%></p>
 		<h1 class="display-4">2017 Stanford Night Market</h1>
 		<hr class="golden" />
 		<h1>Coming Spring 2017</h1>
+	</div>
+	<div class="header-footer">
+		<p>scroll down for more</p>
 	</div>
 </header>
 <section id="home-introduction">
@@ -31,6 +34,28 @@
 				<h1>Join us for an evening of good food and company!</h1>
 				<hr class="red"/>
 				<p>Every year, we aim to reach out to a larger audience, and we hit more than four thousand visitors for the first time in our 2015 Night Market. We continuously strive to improve your experience at the Stanford Night Market, and we look forward to welcoming you again this year!</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="home-about">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 centered-text">
+				<h1>About the Stanford Night Market</h1>
+				<hr class="red"/>
+				<p><strong>The Stanford Night Market</strong> is a tradition hosted by the Taiwanese Cultural Society at Stanford University since 2001. Originally held inside Tresidder Oak Lounge, the Stanford Night Market grew and evolved over the years to become a prominent event on campus. Today, the Stanford Night Market is held in White Plaza between the Tresidder Student Union and the Post Office. Working with various other clubs on campus such as the Stanford Vietnamese Student Association (SVSA), Asian American Student Association (AASA), the Stanford Chinese Music Ensemble, the Stanford Undergraduate Chinese American Association (UCAA), and more, the Stanford Night Market brings people together for an evening of excitement and fun!</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="home-contact">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 centered-text">
+				<h1>Find Us Online</h1>
+				<hr class="red"/>
+				<p>Check out our <%= link_to "Facebook page", "https://www.facebook.com/TaiwaneseCulturalSociety"%>, or visit us at the <%= link_to "Taiwanese Cultural Society home page", "https://taiwanese.stanford.edu"%>. We look forward to seeing you at the 2017 Stanford Night Market!</p>
 			</div>
 		</div>
 	</div>

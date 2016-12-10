@@ -1,8 +1,7 @@
 <nav class="navbar navbar-dark bg-inverse navbar-fixed-top" role="navigation">
+  <%= link_to "Stanford Night Market", { controller: "visit", action: "index"}, { class: "navbar-brand" }%>
   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
   <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-    <%= link_to "Stanford Night Market", { controller: "visit", action: "index"}, { class: "navbar-brand" }%>
-
     <ul class="nav navbar-nav">
         <li class="nav-item"><%= link_to "News", { controller: "visit", action: "news"}, { class: "nav-link" } %></li>
         <li class="nav-item"><%= link_to "Directions", { controller: "visit", action: "directions"}, { class: "nav-link" } %></li>
