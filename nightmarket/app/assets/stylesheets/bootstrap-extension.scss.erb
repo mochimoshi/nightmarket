@@ -37,13 +37,16 @@ hr.light {
 }
 
 header {
-	height: 100%;
-	min-height: 100%;
 	color: #fff;
 	background-size: cover;
 	background-position: center;
 	text-align: center;
 	width: 100%;
+}
+
+header.full {
+	height: 100%;
+	min-height: 100%;
 
 	.header-content {
 		position: absolute;
@@ -64,12 +67,8 @@ header {
 
 /* Header Images */
 header.half {
-	height: 50%;
-	min-height: 50%;
-
-	.header-content {
-		top: 20%;
-	}
+	padding-top: 128px;
+	padding-bottom: 128px;
 }
 
 header#home {
