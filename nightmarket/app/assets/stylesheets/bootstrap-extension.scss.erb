@@ -1,3 +1,6 @@
+$gold: #ffcc33;
+$red: #F05F40;
+
 html {
 	height: 100%;
 	width: 100%;
@@ -25,11 +28,11 @@ hr.full {
 }
 
 hr.red {
-	border-color: #F05F40;
+	border-color: $red;
 }
 
 hr.golden {
-	border-color: #ffcc33;
+	border-color: $gold;
 }
 
 hr.light {
@@ -50,7 +53,7 @@ header.full {
 
 	.header-content {
 		position: absolute;
-		top: 40%;
+		top: 35%;
 		width: 100%
 	}
 
@@ -114,4 +117,8 @@ section#home-night-market-testimonial {
 section#home-about {
 	background-color: #32004c;
 	color: #fff;
+}
+
+.blockquote-footer {
+	color: $gold;
 }
