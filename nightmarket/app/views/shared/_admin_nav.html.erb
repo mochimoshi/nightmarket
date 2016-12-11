@@ -1,0 +1,7 @@
+<section class="admin-initial-content">
+	<h2>Administration</h2>
+	<ul class="nav nav-pills nav-stacked">
+	  <li class="nav-item"><%= link_to "Dashboard", { controller: "admin", action: "dashboard" }, {class: "nav-link" }%></li>
+	  <li class="nav-item"><%= link_to "Sign out as #{current_user.name}", { controller: "sessions", action: "destroy" }, { class: "nav-link" }%></li>
+	</ul>
+</section>
