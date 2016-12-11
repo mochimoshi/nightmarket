@@ -1,8 +1,30 @@
 <hr class="full"/>
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12">
-			<p class="small"><%= link_to "Stanford Night Market", controller: "visit", action: "index" %> · <%= link_to "Stanford Taiwanese Cultural Socity", "https://taiwanese.stanford.edu/"%> · <%= link_to "Facebook", "https://www.facebook.com/TaiwaneseCulturalSociety"%></p>
+		<div class="col-xs-4">
+			<address class="small">
+				<strong>Stanford Night Market</strong><br />
+				Stanford Taiwanese Cultural Society<br />
+				White Plaza, Stanford University<br />
+				Stanford, California 94305
+			</address>
+		</div>
+		<div class="col-xs-4">
+			<p class="small"><strong>Navigation</strong><br />
+			<%= link_to "Stanford Night Market", controller: "visit", action: "index" %><br />
+			<%= link_to "Stanford Taiwanese Cultural Society", "https://taiwanese.stanford.edu/"%><br />
+			<%= link_to "Facebook", "https://www.facebook.com/TaiwaneseCulturalSociety"%></p>
+		</div>
+		<div class="col-xs-4">
+			<p class="small">
+				<% if current_user %>
+					Signed in as <strong><%= current_user.name %></strong>!<br />
+					Dashboard (Coming soon)<br />
+					<%= link_to "Sign out", controller: "sessions", action: "destroy"%>
+				<% else %>
+					<%= link_to "Sign in", "/auth/google_oauth2", id: "sign_in" %>
+				<% end %>
+			</p>
 		</div>
 	</div>
 </div>
