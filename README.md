@@ -38,4 +38,6 @@ With [bundler](http://bundler.io/), you will be able to manage your ruby depende
 
 Now, go into the project directory and also run `bundle install`.
 
-When that is all done, create your test databases with `rake:db` and then run `rails server` to access your site on [localhost:3000](http://localhost:3000). You did it!
+You will need to set up Ruby environmental variables for Google Signin. You can create an app at the [Google Development Console](https://console.developers.google.com).
+
+When that is all done, create your test databases with `rake:db`, create assets with `rake assets:precompile` and then run `rails server` to access your site on [localhost:3000](http://localhost:3000). You did it!
