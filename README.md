@@ -1,5 +1,7 @@
 # Stanford Night Market
 
+![alt text](https://circleci.com/gh/mochimoshi/nightmarket.svg?style=shield&circle-token=:circle-token "Test status")
+
 Hello! Food is delicious, but sometimes you need some code to go with that food. So now what? This is the code for stanfordnightmarket.org - or rather, a refactor of it to clean up some fun hacks to make things work.
 
 ## Getting Set Up
