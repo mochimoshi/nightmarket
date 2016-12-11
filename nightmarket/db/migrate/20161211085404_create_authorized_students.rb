@@ -6,5 +6,7 @@ class CreateAuthorizedStudents < ActiveRecord::Migration[5.0]
       t.string      :email
       t.string      :role
     end
+
+    AuthorizedStudent.create email: "alex.y.wang@alumni.stanford.edu", role: "siteowner"
   end
 end
