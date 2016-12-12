@@ -6,7 +6,7 @@ Hello! Food is delicious, but sometimes you need some code to go with that food.
 
 ## Getting Set Up
 
-Stanford Night Market runs on Ruby on Rails. We're using **ruby v2.3.3** and **rails 5.0.0.1**, and using **postgresql** for the backing database. Let's assume you're starting on MacOS (and people on Windows would have a similar setup - just find the corresponding steps and everything should be A-OK!).
+Stanford Night Market runs on Ruby on Rails. We're using **ruby v2.3.1** and **rails 4.2.7.1**, and using **postgresql** for the backing database. Let's assume you're starting on MacOS (and people on Windows would have a similar setup - just find the corresponding steps and everything should be A-OK!).
 
 **Clone this repo somewhere safe**
 
@@ -28,7 +28,7 @@ Stop the server with this command: `pg_ctl -D /usr/local/var/postgres stop -s -m
 
 **Get rbenv (and ruby)**
 
-See installation instructions for [rbenv](https://github.com/rbenv/rbenv). Make sure you get ruby 2.3.3!
+See installation instructions for [rbenv](https://github.com/rbenv/rbenv). Make sure you get ruby 2.3.1!
 
 **Get bundler**
 
