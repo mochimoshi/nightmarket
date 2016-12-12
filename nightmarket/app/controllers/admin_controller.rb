@@ -10,6 +10,12 @@ class AdminController < ApplicationController
 	end
 
 	def add_new_authorized_user
+		if not current_user
+			flash[:error] = "logged_out"
+			redirect_to controller: "visit", action: "index"
+			return
+		end
+		
 		student = AuthorizedStudent.new
 		student.email = params[:authorized_student][:email].downcase
 		student.role = "member"
