@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'tickets', to: 'visit#tickets'
   get 'about', to: 'visit#about'
 
+  get 'vendor', to: 'vendor#index'
+
   get 'admin/dashboard', to: 'admin#dashboard'
 
   # Admin post requests
