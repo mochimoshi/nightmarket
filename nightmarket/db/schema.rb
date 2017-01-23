@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161211085404) do
+ActiveRecord::Schema.define(version: 20170123083424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,26 @@ ActiveRecord::Schema.define(version: 20161211085404) do
     t.string   "role"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "vendor_name"
+    t.string   "vendor_address"
+    t.string   "vendor_primary_name"
+    t.string   "vendor_primary_email"
+    t.string   "vendor_primary_phone"
+    t.string   "vendor_secondary_name"
+    t.string   "vendor_secondary_email"
+    t.string   "vendor_secondary_phone"
+    t.string   "vendor_food_information"
+    t.string   "vendor_description"
+    t.string   "vendor_website"
+    t.string   "vendor_photo"
+    t.string   "password"
+    t.string   "salt"
+    t.string   "year_participated"
   end
 
 end

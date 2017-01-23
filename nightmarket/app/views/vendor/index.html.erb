@@ -1,5 +1,5 @@
 <% @title = "Vendor Registration: 2017 Stanford Night Market" %>
-<header class="half" id="about">
+<header class="half" id="vendor">
 	<div class="header-content">
 		<h1 class="display-4">Vendor Registration</h1>
 		<hr class="golden" />
@@ -11,6 +11,14 @@
 		<div class="row">
 			<div class="col-lg-10 offset-lg-1">
 				<h1>2017 Stanford Night Market Vendor Registration</h1>
+				<% if @vendor.errors.any? %>
+		      <div class="alert alert-danger">
+		        <p class="lead">Whoops! Something happened!</p>
+		        <% @vendor.errors.full_messages.each do |msg| %>
+		          <p><%= msg %></p>
+		        <% end %>
+		      </div>
+		    <% end %>
 				<p class="lead">Thank you for your interest in participating in the 2017 Stanford Night Market</p>
 				<p>The Stanford Night Market is an annual event hosted by the Taiwanese Cultural Society at Stanford University to celebrate Asian culture and community. There will be food, performances, and games, reminiscent of Taiwan’s vibrant night life. Night Market is also an opportunity to bring together the entire community, both student groups and members of the Bay Area. The Stanford Night Market is one of the many successful student-run night markets through the United States via the Intercollegiate Taiwanese-American Student Association.</p>
 				<h2>Why participate in the Stanford Night Market?</h2>
@@ -23,9 +31,9 @@
 		      <li>Be associated with an event showcasing local causes and talent!</li>
 				</ul>
 				<h2>Event Information</h2>
-				<p>The Stanford Night Market is held at White Plaza, Stanford University, Stanford, California. The dates are yet to be announced, but are most likely in early May from 6 to 9 PM. The expected attendence is over 3000 people per day!</p>
+				<p>The Stanford Night Market will be held at <strong>White Plaza, Stanford University, Stanford, California on March 4 from 6 to 9 pm</strong>. The expected attendence is over 3000 people!</p>
 				<h2>Vendor Package</h2>
-				<p>The following is included in a vendor package:</p>
+				<p><strong>Vendor packages will be $260 for the 2017 Stanford Night Market.</strong>The following is included in a vendor package:</p>
 		    <ul>
 		      <li>10' x 10' canopy tent on a smooth asphalt surface</li>
 		      <li>8 ft table, 1 chair</li>
@@ -33,7 +41,6 @@
 		      <li>Marketing on campus, and in the South Bay and Peninsula</li>
 		      <li>2 11" x 17" posters for marketing. More is available on request.</li>
 		    </ul>
-		    <p>Please look forward for futher details!</p>
         <h3>Frequently Asked Questions</h3>
 		    <h4>What permits are needed?</h4>
 		    <p><strong>There are two permits required: a temporary seller's permit (which must be registered at <%= link_to 'https://efile.boe.ca.gov/ereg/index.boe', 'https://efile.boe.ca.gov/ereg/index.boe' %>) and a temporary event health permit, included as part of the package.</strong> California requires all vendors to apply for a temporary seller’s permit with the California Board of Equalization - a permit for sales of taxable items. Registration is free and can be done at <%= link_to 'https://efile.boe.ca.gov/ereg/index.boe', 'https://efile.boe.ca.gov/ereg/index.boe' %>. <strong>Please mail a copy to us once you are done!</strong> Please use the following address for the temporary special event:</p>
@@ -53,11 +60,134 @@
 		    <p>Vendors are responsible for their own chafing dishes and heating supplies, lights, banners and signage, additional tables, as well as five gallons of 100°F warm water for hand washing.</p>
 		    <h4>How should items be priced?</h4>
 		    <p>Prices should reflect reasonable market rates. Night markets are known for having great bargains, and customers are price sensitive. We recommend selling in volume at lower prices. The Stanford Night Market reserves the right to set a maximum price as necessary.</p>
-		    <!-- <h4>Who should I contact if I have any more questions?</h4>
-		    <p>Contact information goes here</p> -->
+		    <h4>Who should I contact if I have any more questions?</h4>
+		    <p>Contact information goes here</p>
 		    <h3>Thank you! Best of luck, and we hope to see you soon!</h3>
 		    <p>The Taiwanese Cultural Society at Stanford University</p>
-			</div>
+
+				<h3>Vendor Registration</h3>
+				<p>All information that you submit here can be changed up until <strong>February 16</strong> - please let us know before then if you need to modify or cancel your registration. Please note that the above agreement may change. Thank you!</p>
+				<%= form_for :vendor, method: :post, url: {action: :post_registration}, html: {role: "form"} do |f| %>
+					<fieldset>
+				    <legend>Basic Information (Required)</legend>
+				  </fieldset>
+			    <div class="form-group row">
+			      <label for="vendor-name" class="col-sm-2 col-form-label">Business Name</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_name, class: "form-control", id: "vendor-name", placeholder: "e.g. Taiwanese Cultural Society" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-address" class="col-sm-2 col-form-label">Business Address</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_address, class: "form-control", id: "vendor-address", placeholder: "e.g. 541 Lasuen Mall, Ste. 200, Stanford, CA 94305" %>
+			      	<p class="form-text text-muted">Please provide the full address where your restaurant is registered (house number, street number, city, state, ZIP, et cetera.)</p>
+			      </div>
+			    </div>
+			    <fieldset>
+				    <legend>Primary Contact (Required)</legend>
+				  </fieldset>
+			    <div class="form-group row">
+			      <label for="vendor-primary-name" class="col-sm-2 col-form-label">Primary Contact Person</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_primary_name, class: "form-control", id: "vendor-primary-name", placeholder: "e.g. John Doe" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-primary-email" class="col-sm-2 col-form-label">Primary Contact E-mail</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_primary_email, class: "form-control", id: "vendor-primary-email", placeholder: "e.g. jdoe@stanford.edu" %>
+			      	<p class="form-text text-muted">This is used as your login username.</p>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-primary-phone" class="col-sm-2 col-form-label">Primary Contact Phone Number</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_primary_phone, class: "form-control", id: "vendor-primary-phone", placeholder: "e.g. 408.555.5555" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-password" class="col-sm-2 col-form-label">Password</label>
+			      <div class="col-sm-10">
+			        <%= f.password_field :pass, class: "form-control", id: "vendor-password", placeholder: "Password (6 - 64 characters, please!)" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-password-confirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
+			      <div class="col-sm-10">
+			        <%= f.password_field :pass_confirmation, class: "form-control", id: "vendor-password-confirmation", placeholder: "Password Confirmation" %>
+			      </div>
+			    </div>
+			    <fieldset>
+				    <legend>Secondary Contact (Optional)</legend>
+				  </fieldset>
+			    <div class="form-group row">
+			      <label for="vendor-secondary-name" class="col-sm-2 col-form-label">Secondary Contact Person</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_secondary_name, class: "form-control", id: "vendor-secondary-name", placeholder: "e.g. Jane Doe" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-secondary-email" class="col-sm-2 col-form-label">Secondary Contact E-mail</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_secondary_email, class: "form-control", id: "vendor-secondary-email", placeholder: "e.g. jadoe@stanford.edu" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-secondary-phone" class="col-sm-2 col-form-label">Secondary Contact Phone Number</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_secondary_phone, class: "form-control", id: "vendor-secondary-phone", placeholder: "e.g. 408.555.5555" %>
+			      </div>
+			    </div>
+			    <fieldset>
+				    <legend>Booth Information</legend>
+				  </fieldset>
+			    <div class="form-group row">
+			      <label for="vendor-food-information" class="col-sm-2 col-form-label">Food description (Required)</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_area :vendor_food_information, class: "form-control", id: "vendor-food-information", rows: 5, placeholder: "e.g. We are planning to sell pearl milk tea in the following flavors: original, oolong, and taro." %>
+			        <p class="form-text text-muted">Please let us know what you are selling! All food has to be pre-packaged individually - that is, you directly hand them a cup, bag, or some other container instead of serving it on the spot. Let us know if you have any questions here as well. Thank you for your understanding!</p>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-business-information" class="col-sm-2 col-form-label">Business description (Required)</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_area :vendor_description, class: "form-control", id: "vendor-business-information", rows: 5, placeholder: "e.g. The Stanford Night Market was founded in 1994 and aims to connect people to the beauty of Taiwanese culture..." %>
+			        <p class="form-text text-muted">Please put a small blurb about the restaurant (history, specialties, for instance)! This is for publicity purposes - we will feature vendors and their information on our website. Generally 1 - 2 short paragraphs would be great!</p>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-website" class="col-sm-2 col-form-label">Business website (Optional)</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_website, class: "form-control", id: "vendor-website", placeholder: "e.g. taiwanese.stanford.edu" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-photo" class="col-sm-2 col-form-label">Business photo (Optional)</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_photo, class: "form-control", id: "vendor-photo", placeholder: "e.g. https://www.flickr.com/photos/128195661@N08/16920803364/" %>
+			      	<p class="form-text text-muted">Please submit a link to a photo of your business (or e-mail us!) for publicity purposes! Images should be at least 1024px wide and 700px high.</p>
+			      </div>
+			    </div>
+			    <fieldset>
+		        <legend>Terms and Conditions</legend>
+			    </fieldset>
+			    <div class="form-group row">
+			      <div class="offset-sm-2 col-sm-10">
+			        <div class="form-check">
+		        		<div class="form-check-label">
+				          <%= f.check_box :agreement, checked: false, id: "inputAgreement", class: 'form-check-input' %>By checking this box, I agree to the terms set above.
+				        </div>
+				      </div>
+		        </div>
+		      </div>
+			    <div class="form-group row">
+			      <div class="offset-sm-2 col-sm-10">
+			        <%= submit_tag "Submit", class: "btn btn-primary" %>
+			      </div>
+			    </div>
+			   <% end %>
+		   </div>
 		</div>
 	</div>
 </section>

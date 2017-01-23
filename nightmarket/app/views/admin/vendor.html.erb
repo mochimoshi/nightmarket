@@ -1,0 +1,72 @@
+<% @title = "Administrative Dashboard - Vendors: 2017 Stanford Night Market" %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-3 offset-lg-1">
+			<%= render partial: "shared/admin_nav", locals: { active: "dashboard" } %>
+		</div>
+		<div class="col-lg-7">
+			<section class="admin-initial-content" id="admin-dashboard">
+				<h1>Vendors Dashboard</h1>
+				<hr class="full" />
+				<p>Find below a list of vendors who have signed up for the 2017 Stanford Night Market!</p>
+				<% @vendors.each do |vendor| %>
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title"><%= vendor.vendor_name %></h4>
+						<h6 class="card-subtitle mb-2 text-muted">Submitted <%= vendor.created_at.strftime("%m/%d/%Y %I:%M%p") %> UTC</h6>
+						<table class="table">
+							<tbody>
+								<tr>
+									<td><strong>Address</strong></td>
+									<td><%= vendor.vendor_address %></td>
+								</tr>
+								<tr>
+									<td><strong>Primary Contact</strong></td>
+									<td><%= vendor.vendor_primary_name %></td>
+								</tr>
+								<tr>
+									<td><strong>Primary Email</strong></td>
+									<td><%= vendor.vendor_primary_email %></td>
+								</tr>
+								<tr>
+									<td><strong>Primary Phone</strong></td>
+									<td><%= vendor.vendor_primary_phone %></td>
+								</tr>
+								<tr>
+									<td><strong>Secondary Contact</strong></td>
+									<td><%= vendor.vendor_secondary_name %></td>
+								</tr>
+								<tr>
+									<td><strong>Secondary Email</strong></td>
+									<td><%= vendor.vendor_secondary_email %></td>
+								</tr>
+								<tr>
+									<td><strong>Secondary Phone</strong></td>
+									<td><%= vendor.vendor_secondary_phone %></td>
+								</tr>
+								<tr>
+									<td><strong>Food Information</strong></td>
+									<td><%= vendor.vendor_food_information %></td>
+								</tr>
+								<tr>
+									<td><strong>Business Information</strong></td>
+									<td><%= vendor.vendor_description %></td>
+								</tr>
+								<tr>
+									<td><strong>Business Website</strong></td>
+									<td><%= vendor.vendor_website %></td>
+								</tr>
+								<tr>
+									<td><strong>Business Photo</strong></td>
+									<td><%= vendor.vendor_photo %></td>
+								</tr>
+							</tbody>
+						</table>
+						<%= link_to "Delete vendor", action: "remove_vendor", id: vendor.id %>
+					</div>
+				</div>
+				<% end %>
+			</section>
+		</div>
+	</div>
+</div>

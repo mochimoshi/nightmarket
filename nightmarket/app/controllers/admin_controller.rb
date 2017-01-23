@@ -24,6 +24,56 @@ class AdminController < ApplicationController
 		redirect_to action: "dashboard"
 	end
 
+	def remove_authorized_user
+		if not current_user
+			flash[:error] = "logged_out"
+			redirect_to controller: "visit", action: "index"
+			return
+		end
+
+		@user = AuthorizedStudent.find_by id: params[:id]
+		if @user.nil? and @user.role != "member"
+			flash[:error] = "User not found"
+			redirect_to action: "dashboard"
+			return
+		end
+
+		AuthorizedStudent.destroy params[:id]
+
+		flash[:success] = "User deleted."
+		redirect_to action: "dashboard"
+	end
+
+	def vendor
+		if not current_user
+			flash[:error] = "logged_out"
+			redirect_to controller: "visit", action: "index"
+			return
+		end
+
+		@vendors = Vendor.all
+	end
+
+	def remove_vendor
+		if not current_user
+			flash[:error] = "logged_out"
+			redirect_to controller: "visit", action: "index"
+			return
+		end
+
+		@vendor = Vendor.find_by id: params[:id]
+		if @vendor.nil? and @vendor.year_participated != "2017"
+			flash[:error] = "Vendor not found"
+			redirect_to action: "vendor"
+			return
+		end
+
+		Vendor.destroy params[:id]
+
+		flash[:success] = "Vendor deleted."
+		redirect_to action: "vendor"
+	end
+
 	private
 	def current_user
   	return current_user ||= User.find(session[:user_id]) if session[:user_id]
