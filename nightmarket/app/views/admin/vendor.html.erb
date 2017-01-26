@@ -10,7 +10,15 @@
 				<hr class="full" />
 				<p>Find below a list of vendors who have signed up for the 2017 Stanford Night Market!</p>
 				<% @vendors.each do |vendor| %>
-				<div class="card">
+
+				<% if vendor.approved %>
+				<div class="card card-outline-success">
+					<div class="card-header card-header-inverse card-success">Approved</div>
+				<% else %>
+				<div class="card card-outline-danger">
+					<div class="card-header card-header-inverse card-danger">Pending</div>
+				<% end %>
+
 					<div class="card-block">
 						<h4 class="card-title"><%= vendor.vendor_name %></h4>
 						<h6 class="card-subtitle mb-2 text-muted">Submitted <%= vendor.created_at.strftime("%m/%d/%Y %I:%M%p") %> UTC</h6>
@@ -62,7 +70,9 @@
 								</tr>
 							</tbody>
 						</table>
-						<%= link_to "Delete vendor", action: "remove_vendor", id: vendor.id %>
+						<p><%= link_to "Approve vendor", { action: "approve_vendor", id: vendor.id }, class: "btn btn-success" %> 
+						<%= link_to "Unapprove vendor", { action: "reject_vendor", id: vendor.id }, class: "btn btn-danger" %></p>
+						<p><small><strong>Dangerous options</strong> - these actions cannot be undone: <%= link_to "delete vendor", action: "remove_vendor" , id: vendor.id %></small></p>
 					</div>
 				</div>
 				<% end %>

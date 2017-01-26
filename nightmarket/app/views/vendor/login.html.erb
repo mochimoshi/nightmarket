@@ -1,0 +1,43 @@
+<% @title = "Vendor Login: 2017 Stanford Night Market" %>
+<header class="half" id="vendor">
+	<div class="header-content">
+		<h1 class="display-4">Vendor Login</h1>
+		<hr class="golden" />
+		<h1>View registration for food sales at the Stanford Night Market</h1>
+	</div>
+</header>
+<section id="vendor-index">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-10 offset-lg-1">
+				<h1>2017 Stanford Night Market Vendor Login</h1>
+				<% if !flash[:login_msg].nil? %>
+		      <div class="alert alert-danger">
+		        <p class="lead">Whoops! Something happened!</p>
+		        <p><%= flash[:login_msg] %></p>
+		      </div>
+		    <% end %>
+				<h3>Please log in to view and make changes to your registration.</h3>
+				<%= form_for :vendor, method: :post, url: {action: :post_login}, html: {role: "form"} do |f| %>
+			    <div class="form-group row">
+			      <label for="vendor-login-email" class="col-sm-2 col-form-label">Primary E-mail</label>
+			      <div class="col-sm-10">
+			      	<%= f.text_field :vendor_primary_email, class: "form-control", id: "vendor-login-email", placeholder: "E-mail" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <label for="vendor-password" class="col-sm-2 col-form-label">Password</label>
+			      <div class="col-sm-10">
+			        <%= f.password_field :pass, class: "form-control", id: "vendor-password", placeholder: "Password" %>
+			      </div>
+			    </div>
+			    <div class="form-group row">
+			      <div class="offset-sm-2 col-sm-10">
+			        <%= submit_tag "Submit", class: "btn btn-primary" %>
+			      </div>
+			    </div>
+			   <% end %>
+		   </div>
+		</div>
+	</div>
+</section>

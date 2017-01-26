@@ -6,14 +6,17 @@
 				<strong>Stanford Night Market</strong><br />
 				Stanford Taiwanese Cultural Society<br />
 				White Plaza, Stanford University<br />
+				519 Lasuen Mall<br />
 				Stanford, California 94305
 			</address>
 		</div>
 		<div class="col-lg-2 col-xs-4">
-			<p class="small"><strong>Navigation</strong><br />
-			<%= link_to "Stanford Night Market", controller: "visit", action: "index" %><br />
+			<p class="small"><strong>Links</strong><br />
+			<%= link_to "Home", controller: "visit", action: "index" %><br />
 			<%= link_to "Stanford Taiwanese Cultural Society", "https://taiwanese.stanford.edu/"%><br />
-			<%= link_to "Facebook", "https://www.facebook.com/TaiwaneseCulturalSociety"%></p>
+			<%= link_to "Taiwanese Cultural Society on Facebook", "https://www.facebook.com/TaiwaneseCulturalSociety"%><br />
+			<%= link_to "Stanford Asian American Student Association", "http://aasa.stanford.edu/"%><br />
+			</p>
 		</div>
 		<div class="col-lg-2 col-xs-4">
 			<p class="small">
@@ -22,8 +25,11 @@
 					<%= link_to "Dashboard", controller: "admin", action: "dashboard"%><br />
 					<%= link_to "Sign out", controller: "sessions", action: "destroy"%>
 				<% else %>
-					<%= link_to "Sign in", "/auth/google_oauth2", id: "sign_in" %>
+					<%= link_to "Core Login", "/auth/google_oauth2", id: "sign_in" %>
 				<% end %>
+				<br /><br />
+				<strong>Logins</strong><br />
+				<%= link_to "Vendor Login", controller: "vendor", action: "login" %>
 			</p>
 		</div>
 	</div>

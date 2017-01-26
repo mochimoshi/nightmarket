@@ -15,12 +15,20 @@ Rails.application.routes.draw do
   get 'vendor/registration_success', to: 'vendor#registration_success'
   post 'vendor/post_registration', to: 'vendor#post_registration'
 
+  get 'vendor/login', to: 'vendor#login'
+  get 'vendor/post_login', to: 'vendor#login'
+  post 'vendor/post_login', to: 'vendor#post_login'
+  get 'vendor/view_registration', to: 'vendor#view_registration'
+  get 'vendor/logout', to: 'vendor#logout'
+
   # Admin
   get 'admin/dashboard', to: 'admin#dashboard'
   get 'admin/remove_authorized_user(/:id)', to: 'admin#remove_authorized_user'
 
   get 'admin/vendor', to: 'admin#vendor'
   get 'admin/remove_vendor(/:id)', to: 'admin#remove_vendor'
+  get 'admin/approve_vendor(/:id)', to: 'admin#approve_vendor'
+  get 'admin/reject_vendor(/:id)', to: 'admin#reject_vendor'
 
   # Admin post requests
   post 'admin/add_new_authorized_user', to: 'admin#add_new_authorized_user'
