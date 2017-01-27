@@ -22,13 +22,15 @@
 			<p class="small">
 				<% if current_user %>
 					Signed in as <strong><%= current_user.name %></strong>!<br />
-					<%= link_to "Dashboard", controller: "admin", action: "dashboard"%><br />
-					<%= link_to "Sign out", controller: "sessions", action: "destroy"%>
+					<% if authorized_user %>
+						<%= link_to "TCS Core Dashboard", controller: "admin", action: "dashboard"%><br />
+					<% else %>
+						<%= link_to "Student Group Dashboard", controller: "student", action: "dashboard"%><br />
+					<% end %>
+					<%= link_to "Sign out", controller: "sessions", action: "destroy"%><br /><br />
 				<% else %>
-					<%= link_to "Core Login", "/auth/google_oauth2", id: "sign_in" %>
+					<%= link_to "Student Login", "/auth/google_oauth2", id: "sign_in" %><br />
 				<% end %>
-				<br /><br />
-				<strong>Logins</strong><br />
 				<%= link_to "Vendor Login", controller: "vendor", action: "login" %>
 			</p>
 		</div>

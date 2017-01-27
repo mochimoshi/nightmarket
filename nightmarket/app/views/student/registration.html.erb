@@ -11,6 +11,14 @@
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
         <h1>2017 Stanford Night Market Student Group Registration</h1>
+        <% if @group.errors.any? %>
+          <div class="alert alert-danger">
+            <p class="lead">Whoops! Something happened!</p>
+            <% @group.errors.full_messages.each do |msg| %>
+              <p><%= msg %></p>
+            <% end %>
+          </div>
+        <% end %>
         <p class="lead">Thank you for your interest in participating in the 2017 Stanford Night Market!</p>
         <p>There are a few things that we need to double check with you - as this is a public event with food sales, please note that we will have to comply to the following regulations set by the Santa Clara Department of Health. We will contact you with details and instructions in the coming weeks. <strong class="text-danger">You must be a registered student group under Stanford University in order to participate.</strong></p>
         <h3>Why should you participate in Stanford Night Market?</h3>
@@ -157,7 +165,7 @@
             </div>
           </div>
           <div class="form-group row">
-            <label for="group-activity-information" class="col-sm-2 col-form-label">Performance information</label>
+            <label for="group-activity-information" class="col-sm-2 col-form-label">Activity information</label>
             <div class="col-sm-10">
               <%= f.text_area :group_activity_information, class: "form-control", id: "group-activity-information", rows: 5, placeholder: "e.g. We will be hosting traditional night market games such as ring tosses..." %>
               <p class="form-text text-muted">Please put what you are hosting, and any requirements you may have, such as tables. We will do our best to help!</p>

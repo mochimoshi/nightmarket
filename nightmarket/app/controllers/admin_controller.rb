@@ -7,6 +7,8 @@ class AdminController < ApplicationController
     end
 
     @authorizedUsers = AuthorizedStudent.all
+
+    @isGroup = is_current_user_in_student_group
   end
 
   def add_new_authorized_user
@@ -52,6 +54,7 @@ class AdminController < ApplicationController
     end
 
     @vendors = Vendor.all
+    @isGroup = is_current_user_in_student_group
   end
 
   def remove_vendor
@@ -114,8 +117,86 @@ class AdminController < ApplicationController
     redirect_to action: "vendor"
   end
 
+  def group
+    if not current_user
+      flash[:error] = "logged_out"
+      redirect_to controller: "visit", action: "index"
+      return
+    end
+
+    @groups = Group.all
+    @isGroup = is_current_user_in_student_group
+  end
+
+  def remove_group
+    if not current_user
+      flash[:error] = "logged_out"
+      redirect_to controller: "visit", action: "index"
+      return
+    end
+
+    @group = Group.find_by id: params[:id]
+    if @group.nil? and @group.year_participated != "2017"
+      flash[:error] = "Group not found"
+      redirect_to action: "group"
+      return
+    end
+
+    Group.destroy params[:id]
+
+    flash[:success] = "Group deleted."
+    redirect_to action: "group"
+  end
+
+  def approve_group
+    if not current_user
+      flash[:error] = "logged_out"
+      redirect_to controller: "visit", action: "index"
+      return
+    end
+
+    @group = Group.find_by id: params[:id]
+    if @group.nil? and @vendor.year_participated != "2017"
+      flash[:error] = "Group not found"
+      redirect_to action: "group"
+      return
+    end
+
+    @group.approved = true
+    @group.save(validate: false)
+
+    redirect_to action: "group"
+  end
+
+  def reject_group
+    if not current_user
+      flash[:error] = "logged_out"
+      redirect_to controller: "visit", action: "index"
+      return
+    end
+
+    @group = Group.find_by id: params[:id]
+    if @group.nil? and @group.year_participated != "2017"
+      flash[:error] = "Group not found"
+      redirect_to action: "group"
+      return
+    end
+
+    @group.approved = false
+    @group.save(validate: false)
+
+    redirect_to action: "group"
+  end
+
   private
   def current_user
-    return current_user ||= User.find(session[:user_id]) if session[:user_id]
+    user = User.find(session[:user_id]) if session[:user_id]
+    return current_user ||= user if AuthorizedStudent.find_by email: user.email
+  end
+
+  def is_current_user_in_student_group
+    user = User.find(session[:user_id])
+    group = Group.find_by group_primary_email: user.email
+    return group.nil? == false
   end
 end

@@ -3,6 +3,12 @@
 	<ul class="nav nav-pills nav-stacked">
 	  <li class="nav-item"><%= link_to "Dashboard", { controller: "admin", action: "dashboard" }, {class: "nav-link" }%></li>
 	  <li class="nav-item"><%= link_to "Vendors", { controller: "admin", action: "vendor" }, {class: "nav-link" }%></li>
+	  <li class="nav-item"><%= link_to "Student Groups", { controller: "admin", action: "group" }, {class: "nav-link" }%></li>
 	  <li class="nav-item"><%= link_to "Sign out as #{current_user.name}", { controller: "sessions", action: "destroy" }, { class: "nav-link" }%></li>
+
+	  <% if isGroup %>
+	  	<hr class="full" />
+	  	<li class="nav-item"><%= link_to "Group Dashboard", { controller: "student", action: "dashboard" }, {class: "nav-link" }%></li>
+	  <% end %>
 	</ul>
 </section>

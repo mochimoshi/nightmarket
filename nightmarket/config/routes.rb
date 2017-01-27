@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'student', to: 'student#registration'
   get 'student/post_registration', to: 'student#registration'
   post 'student/post_registration', to: 'student#post_registration'
+  get 'student/registration_success', to: 'student#registration_success'
   get 'student/dashboard', to: 'student#dashboard'
 
   # Vendors
@@ -35,6 +36,11 @@ Rails.application.routes.draw do
   get 'admin/remove_vendor(/:id)', to: 'admin#remove_vendor'
   get 'admin/approve_vendor(/:id)', to: 'admin#approve_vendor'
   get 'admin/reject_vendor(/:id)', to: 'admin#reject_vendor'
+
+  get 'admin/group', to: 'admin#group'
+  get 'admin/remove_group(/:id)', to: 'admin#remove_group'
+  get 'admin/approve_group(/:id)', to: 'admin#approve_group'
+  get 'admin/reject_group(/:id)', to: 'admin#reject_group'
 
   # Admin post requests
   post 'admin/add_new_authorized_user', to: 'admin#add_new_authorized_user'

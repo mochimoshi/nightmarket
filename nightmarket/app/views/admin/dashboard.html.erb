@@ -2,7 +2,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-lg-3 offset-lg-1">
-			<%= render partial: "shared/admin_nav", locals: { active: "dashboard" } %>
+			<%= render partial: "shared/admin_nav", locals: { active: "dashboard", isGroup: @isGroup } %>
 		</div>
 		<div class="col-lg-7">
 			<section class="admin-initial-content" id="admin-dashboard">

@@ -1,0 +1,91 @@
+<% @title = "Administrative Dashboard - Groups: 2017 Stanford Night Market" %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3 offset-lg-1">
+      <%= render partial: "shared/admin_nav", locals: { active: "dashboard", isGroup: @isGroup } %>
+    </div>
+    <div class="col-lg-7">
+      <section class="admin-initial-content" id="admin-dashboard">
+        <h1>Student Groups Dashboard</h1>
+        <hr class="full" />
+        <p>Find below a list of groups who have signed up for the 2017 Stanford Night Market!</p>
+        <% @groups.each do |group| %>
+
+          <% # This is to determine the outline of the card %>
+          <% if group.approved %>
+          <div class="card card-outline-success">
+            <div class="card-header card-header-inverse card-success">Approved</div>
+          <% else %>
+          <div class="card card-outline-danger">
+            <div class="card-header card-header-inverse card-danger">Pending</div>
+          <% end %>
+
+            <div class="card-block">
+            <h4 class="card-title"><%= group.group_name %></h4>
+            <h6 class="card-subtitle mb-2 text-muted">Submitted <%= group.created_at.strftime("%m/%d/%Y %I:%M%p") %> UTC</h6>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td><strong>Primary Contact</strong></td>
+                  <td><%= group.group_primary_name %></td>
+                </tr>
+                <tr>
+                  <td><strong>Primary Email</strong></td>
+                  <td><%= group.group_primary_email %></td>
+                </tr>
+                <tr>
+                  <td><strong>Primary Phone</strong></td>
+                  <td><%= group.group_primary_phone %></td>
+                </tr>
+                <tr>
+                  <td><strong>Secondary Contact</strong></td>
+                  <td><%= group.group_secondary_name %></td>
+                </tr>
+                <tr>
+                  <td><strong>Secondary Email</strong></td>
+                  <td><%= group.group_secondary_email %></td>
+                </tr>
+                <tr>
+                  <td><strong>Secondary Phone</strong></td>
+                  <td><%= group.group_secondary_phone %></td>
+                </tr>
+                <tr>
+                  <td><strong>Food Information</strong></td>
+                  <td><%= group.group_food_information %></td>
+                </tr>
+                <tr>
+                  <td><strong>Booth Information</strong></td>
+                  <td><%= group.group_booth_size %></td>
+                </tr>
+                <tr>
+                  <td><strong>Activity Information</strong></td>
+                  <td><%= group.group_activity_information %></td>
+                </tr>
+                <tr>
+                  <td><strong>Performance Information</strong></td>
+                  <td><%= group.group_performance_information %></td>
+                </tr>
+                <tr>
+                  <td><strong>Group Description</strong></td>
+                  <td><%= group.group_description %></td>
+                </tr>
+                <tr>
+                  <td><strong>Group Website</strong></td>
+                  <td><%= group.group_website %></td>
+                </tr>
+                <tr>
+                  <td><strong>Group Photo</strong></td>
+                  <td><%= group.group_photo %></td>
+                </tr>
+              </tbody>
+            </table>
+            <p><%= link_to "Approve group", { action: "approve_group", id: group.id }, class: "btn btn-success" %> 
+            <%= link_to "Unapprove group", { action: "reject_group", id: group.id }, class: "btn btn-danger" %></p>
+            <p><small><strong>Dangerous options</strong> - <span class="text-danger">these actions cannot be undone</span>: <%= link_to "delete group", action: "remove_group" , id: group.id %></small></p>
+          </div>
+        </div>
+        <% end %>
+      </section>
+    </div>
+  </div>
+</div>
