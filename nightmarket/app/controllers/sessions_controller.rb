@@ -11,9 +11,16 @@ class SessionsController < ApplicationController
 
     authorized_user = AuthorizedStudent.find_by email: auth.info.email
     if authorized_user.nil?
-      flash[:error] = "unauthorized_user"
-      redirect_to controller: "visit", action: "index"
-      return
+      # Maybe it's a student group?
+      student_group = Group.find_by group_primary_email: auth.info.email
+      if student_group.nil?
+        flash[:error] = "unauthorized_user"
+        redirect_to controller: "visit", action: "index"
+        return
+      end
+
+      session[:group_id] = student_group.id
+      redirect_to controller: "student", action: "dashboard"
     end
     
     user = User.from_omniauth(auth)

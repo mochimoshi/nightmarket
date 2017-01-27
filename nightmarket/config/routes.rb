@@ -9,6 +9,12 @@ Rails.application.routes.draw do
   get 'tickets', to: 'visit#tickets'
   get 'about', to: 'visit#about'
 
+  # Student Groups
+  get 'student', to: 'student#registration'
+  get 'student/post_registration', to: 'student#registration'
+  post 'student/post_registration', to: 'student#post_registration'
+  get 'student/dashboard', to: 'student#dashboard'
+
   # Vendors
   get 'vendor', to: 'vendor#index'
   get 'vendor/post_registration', to: 'vendor#index'

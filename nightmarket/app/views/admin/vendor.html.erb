@@ -72,7 +72,7 @@
 						</table>
 						<p><%= link_to "Approve vendor", { action: "approve_vendor", id: vendor.id }, class: "btn btn-success" %> 
 						<%= link_to "Unapprove vendor", { action: "reject_vendor", id: vendor.id }, class: "btn btn-danger" %></p>
-						<p><small><strong>Dangerous options</strong> - these actions cannot be undone: <%= link_to "delete vendor", action: "remove_vendor" , id: vendor.id %></small></p>
+						<p><small><strong>Dangerous options</strong> - <span class="text-danger">these actions cannot be undone</span>: <%= link_to "delete vendor", action: "remove_vendor" , id: vendor.id %></small></p>
 					</div>
 				</div>
 				<% end %>

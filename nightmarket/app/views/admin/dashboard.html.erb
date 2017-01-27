@@ -13,7 +13,6 @@
 					<thead>
 						<tr>
 							<th>E-Mail</th>
-							<th>Role</th>
 							<th>Action</th>
 						</tr>
 					</thead>
@@ -21,7 +20,6 @@
 					<% @authorizedUsers.each do |student| %>
 						<tr>
 							<td><%= student.email %></td>
-							<td><%= student.display_role %></td>
 							<td>
 								<% if student.display_role == "Member" %>
 									<%= link_to 'Remove User', action: 'remove_authorized_user', id: student.id %>

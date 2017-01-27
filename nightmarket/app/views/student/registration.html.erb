@@ -1,0 +1,207 @@
+<% @title = "Student Group Registration: 2017 Stanford Night Market" %>
+<header class="half" id="group">
+  <div class="header-content">
+    <h1 class="display-4">Student Group Registration</h1>
+    <hr class="golden" />
+    <h1>Register for a space at the Stanford Night Market</h1>
+  </div>
+</header>
+<section id="group-index">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <h1>2017 Stanford Night Market Student Group Registration</h1>
+        <p class="lead">Thank you for your interest in participating in the 2017 Stanford Night Market!</p>
+        <p>There are a few things that we need to double check with you - as this is a public event with food sales, please note that we will have to comply to the following regulations set by the Santa Clara Department of Health. We will contact you with details and instructions in the coming weeks. <strong class="text-danger">You must be a registered student group under Stanford University in order to participate.</strong></p>
+        <h3>Why should you participate in Stanford Night Market?</h3>
+        <ol>
+          <li><strong>Great publicity for your student group!</strong><br />
+          With over 3000 attendees in 2015, Night Market is a great opportunity to advertise your student group to the Stanford and Bay Area community. It’ll also be a great audience for performance groups.</li>
+          <li><strong>Profits!</strong><br />
+          Again, with the large number of attendees, there’s lots of potential profit to be made if you are selling food.</li>
+          <li><strong>A mix of culture!</strong><br />
+          Wouldn’t it be nice to bring different student groups together? We would love to showcase the diversity of student groups that we have at Stanford. The more the merrier!</li>
+        </ol>
+        <h3>Event details</h3>
+        <p>Here are the details where and when Night Market is happening!</p>
+        <dl class="dl-horizontal">
+          <dt>Where</dt>
+          <dd>White Plaza, between the Tresidder Student Union and the Post Office</dd>
+          <dt>When</dt>
+          <dd>Saturday, March 4th, 5 - 8 PM</dd>
+        </dl>
+        <h3>Registration information</h3>
+        <p><strong>Because of limited space in White Plaza, we can only have a certain number of student groups. Register soon!</strong> Please be as specific as you can on the registration form.</p>
+        <p>Registration for food groups includes:</p>
+        <ol>
+          <li>A 10x10 tent space (full booth) or a 5x10 half tent space (half booth)</li>
+          <li>A Santa Clara health permit allowing you to sell food</li>
+        </ol>
+        <p>Food groups are responsible for the following as well:</p>
+        <ol>
+          <li>A 20"x30"+ sign that can stand up (e.g. made of foamboard) and visible from far away with the items you are selling and their prices.</li>
+          <li>Trays, racks, and heating elements (e.g. sternos) or cooling elements (e.g. coolers) to keep food at the right temperatures</li>
+        </ol>
+        <p>If you need help with getting these things, please write this below in the form for food description. We will do our best to help, but we cannot guarantee that we can fulfill all requests.</p>
+        <p><em>After February 18th, you will have to pay a cancellation fee if you back out of the event. This is to cover the costs of the tents and health permits.</em></p>
+        <table class="table">
+          <tr>
+            <th>Early Registration (food)</th>
+            <th>Regular Registration (food)</th>
+            <th>Games and Performance</th>
+          </tr>
+          <tr>
+            <td>Submit by <strong>February 10, 5PM</strong></td>
+            <td>Submit by <strong>February 18, 5PM</strong></td>
+            <td>Submit by <strong>February 18, 5PM</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Half booth</strong>: No charge</td>
+            <td><strong>Half booth</strong>: $30</td>
+            <td>No charge</td>
+          </tr>
+          <tr>
+            <td><strong>Full booth</strong>: $30</td>
+            <td><strong>Full booth</strong>: $60</td>
+            <td>No charge</td>
+          </tr>
+        </table>
+        <p>All information that you submit here can be changed up until each registration date - please let us know before then if you need to modify or cancel your registration. Thank you!</p>
+        <p>This year all funds will be directly deposited into your group account that evening, as stated by the Stanford Students Activities and Leadership guidelines. All sales will need to be taxed as per Santa Clara County's sales tax.</p>
+        <h4>Are alcohol sales allowed?</h4>
+        <p>Alcohol sales are not allowed at the Stanford Night Market.</p>
+        <h4>How does the ticketing system work?</h4>
+        <p>To reduce the problem of dealing with money and change, visitors will use tickets (priced at 50 cents each) to purchase items. We will exchange tickets for either the cash or check amount at the end of the event. You are entitled to 100% of any profits made by your booth.</p>
+        <h4>What are the cooking regulations?</h4>
+        <p>Please cover open cooking equipment to avoid contamination. We will provide containers to dump out used oil. <strong>Dumping oil on the ground or grass is strictly prohibited, and you will be fined if there are stains or destruction of property in your booth space.</strong> Since tent space is limited, cooking should be done at a separate, health department approved commerical facility, then transporting prepackaged food to Night Market to sell.</p>
+        <h4>Will there be water available for cooking or drinking?</h4>
+        <p>Vendors are responsible for their own chafing dishes and heating supplies, lights, banners and signage, additional tables, as well as five gallons of 100°F warm water for hand washing.</p>
+        <h4>How should items be priced?</h4>
+        <p>Prices should reflect reasonable market rates. Night markets are known for having great bargains, and customers are price sensitive. We recommend selling in volume at lower prices. The Stanford Night Market reserves the right to set a maximum price as necessary.</p>
+        <p>If you have any questions about registration, please contact.</p>
+
+        <%= form_for :group, method: :post, url: {action: :post_registration}, html: {role: "form"} do |f| %>
+          <fieldset>
+            <legend>Basic Information (Required)</legend>
+          </fieldset>
+          <div class="form-group row">
+            <label for="group-name" class="col-sm-2 col-form-label">Group Name</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_name, class: "form-control", id: "group-name", placeholder: "e.g. Taiwanese Cultural Society" %>
+            </div>
+          </div>
+          <fieldset>
+            <legend>Primary Contact (Required)</legend>
+          </fieldset>
+          <div class="form-group row">
+            <label for="group-primary-name" class="col-sm-2 col-form-label">Primary Contact Person</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_primary_name, class: "form-control", id: "group-primary-name", placeholder: "e.g. John Doe" %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-primary-email" class="col-sm-2 col-form-label">Primary Contact E-mail</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_primary_email, class: "form-control", id: "group-primary-email", placeholder: "e.g. jdoe@stanford.edu" %>
+              <p class="form-text text-muted">This must be a Stanford e-mail address. Your Stanford account will be used for authentication.</p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-primary-phone" class="col-sm-2 col-form-label">Primary Contact Phone Number</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_primary_phone, class: "form-control", id: "group-primary-phone", placeholder: "e.g. 408.555.5555" %>
+            </div>
+          </div>
+          <fieldset>
+            <legend>Secondary Contact (Optional)</legend>
+          </fieldset>
+          <div class="form-group row">
+            <label for="group-secondary-name" class="col-sm-2 col-form-label">Secondary Contact Person</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_secondary_name, class: "form-control", id: "group-secondary-name", placeholder: "e.g. Jane Doe" %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-secondary-email" class="col-sm-2 col-form-label">Secondary Contact E-mail</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_secondary_email, class: "form-control", id: "group-secondary-email", placeholder: "e.g. jadoe@stanford.edu" %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-secondary-phone" class="col-sm-2 col-form-label">Secondary Contact Phone Number</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_secondary_phone, class: "form-control", id: "group-secondary-phone", placeholder: "e.g. 408.555.5555" %>
+            </div>
+          </div>
+          <fieldset>
+            <legend>Booth Information</legend>
+          </fieldset>
+          <div class="form-group row">
+            <label for="group-food-information" class="col-sm-2 col-form-label">Food sales information</label>
+            <div class="col-sm-10">
+              <%= f.text_area :group_food_information, class: "form-control", id: "group-food-information", rows: 5, placeholder: "e.g. We are planning to sell pearl milk tea in the following flavors: original, oolong, and taro." %>
+              <p class="form-text text-muted">Please put what you are selling and where you are getting it from. All food has to be pre-packaged individually - that is, you directly hand them a cup, bag, or some other container instead of serving it on the spot. The Santa Clara Health Department may require proof of purchase at the event. Please note here anything that you may need also so we can work with you to get issues resolved. Let us know if you have any questions here as well. Please note that cancelling your booth after February 18 will result in a penalty of $100 to cover the cost of the permit. Thank you for your understanding!</p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-food-booth-size" class="col-sm-2 col-form-label">Booth size information</label>
+            <div class="col-sm-10">
+              <%= f.select :group_booth_size, options_for_select([['Half booth', 'Half'], ['Full booth', 'Full'], ['No booth needed', 'None']]), {}, {class: "form-control", id: "group-food-booth-size"} %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-performance-information" class="col-sm-2 col-form-label">Performance information</label>
+            <div class="col-sm-10">
+              <%= f.text_area :group_performance_information, class: "form-control", id: "group-performance-information", rows: 5, placeholder: "e.g. We will be performing traditional Taiwanese dance and will require a amplified music..." %>
+              <p class="form-text text-muted">Please put a short description of what you are performing, how long it is, whether or not you would need amplification, and approximate time you would prefer (i.e. 5 - 6 PM, 6 - 7 PM, 7 - 8 PM) Also, please put any questions or comments here as well. <strong>Please, e-mail your accompanying music in MP3 or WAV format to  at stanford.edu before March 1, 2015. Internet in White Plaza will be swamped, so be sure to give these files to her ASAP.</strong></p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-activity-information" class="col-sm-2 col-form-label">Performance information</label>
+            <div class="col-sm-10">
+              <%= f.text_area :group_activity_information, class: "form-control", id: "group-activity-information", rows: 5, placeholder: "e.g. We will be hosting traditional night market games such as ring tosses..." %>
+              <p class="form-text text-muted">Please put what you are hosting, and any requirements you may have, such as tables. We will do our best to help!</p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-description" class="col-sm-2 col-form-label">Group description (Required)</label>
+            <div class="col-sm-10">
+              <%= f.text_area :group_description, class: "form-control", id: "group-description", rows: 5, placeholder: "e.g. The Stanford Night Market was founded in 1994 and aims to connect people to the beauty of Taiwanese culture..." %>
+              <p class="form-text text-muted">You can probably copy-paste your mission statement and/or other "about us" information here! This is for publicity purposes - we will feature groups and their information on our website. Generally 1 - 2 short paragraphs would be great!</p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-website" class="col-sm-2 col-form-label">Group website</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_website, class: "form-control", id: "group-website", placeholder: "e.g. taiwanese.stanford.edu" %>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="group-photo" class="col-sm-2 col-form-label">Group photo</label>
+            <div class="col-sm-10">
+              <%= f.text_field :group_photo, class: "form-control", id: "group-photo", placeholder: "e.g. https://www.flickr.com/photos/128195661@N08/16920803364/" %>
+              <p class="form-text text-muted">Please submit a link to a photo of your student group (or e-mail us!) for publicity purposes! Images should be at least 1024px wide and 700px high.</p>
+            </div>
+          </div>
+          <fieldset>
+            <legend>Terms and Conditions</legend>
+          </fieldset>
+          <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+              <div class="form-check">
+                <div class="form-check-label">
+                  <%= f.check_box :agreement, checked: false, id: "inputAgreement", class: 'form-check-input' %>By checking this box, I agree to the terms set above.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+              <%= submit_tag "Submit", class: "btn btn-primary" %>
+            </div>
+          </div>
+         <% end %>
+      </div>
+    </div>
+  </div>  
+</section>
