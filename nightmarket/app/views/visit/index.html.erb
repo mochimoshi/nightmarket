@@ -5,6 +5,7 @@
     <h1 class="display-4">2017 Stanford Night Market</h1>
     <hr class="golden" />
     <h1>Saturday, March 4</h1>
+    <p class="button-row"><%= link_to "RSVP on Facebook", "/fb", class: "btn btn-success" %> <%= link_to "Student Booth Registration", {controller: "student", action: "registration" }, class: "btn btn-primary" %> <%= link_to "Vendor Booth Registration", {controller: "vendor", action: "index" }, class: "btn btn-primary" %></p>
   </div>
   <div class="header-footer">
     <% if flash[:error] == "unauthorized_domain" or flash[:error] == "logged_out" %>
@@ -16,7 +17,7 @@
                                                             title: "Whoops!",
                                                             body: "Please contact the administrator for access!"} %>
     <% end %>
-    <p>scroll down for more</p>
+    <div class="white-link"><%= link_to "scroll down for more", "/", id: "index-scroll" %></div>
   </div>
 </header>
 <section id="home-introduction">
@@ -75,6 +76,11 @@
         <h1>Find Us Online</h1>
         <hr class="red"/>
         <p>Check out our <%= link_to "Facebook page", "https://www.facebook.com/TaiwaneseCulturalSociety"%>, or visit us at the <%= link_to "Taiwanese Cultural Society home page", "https://taiwanese.stanford.edu"%>. We look forward to seeing you at the 2017 Stanford Night Market!</p>
+        <div class="row">
+          <div class="col-lg-4 offset-lg-4">
+            <%= link_to "RSVP today on Facebook!", "/fb", class: "btn btn-lg btn-primary btn-block" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

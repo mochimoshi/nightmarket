@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get 'tickets', to: 'visit#tickets'
   get 'about', to: 'visit#about'
 
+  # External URL
+  get 'fb', to: redirect("https://www.facebook.com/events/1546559075377345/")
+  get 'photos', to: redirect("https://www.flickr.com/photos/128195661@N08/albums/72157652668916165")
+
   # Student Groups
   get 'student', to: 'student#registration'
   get 'student/post_registration', to: 'student#registration'

@@ -2,140 +2,167 @@ $gold: #ffcc33;
 $red: #F05F40;
 
 html {
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-	@extend html;
-	font-family: 'Open Sans', sans-serif;
+  @extend html;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Josefin Sans', sans-serif;
-	font-weight: 300;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
 }
 
 hr {
-	border-width: 3px;
-	max-width: 50px;
+  border-width: 3px;
+  max-width: 50px;
 }
 
 /* Line colors */
 hr.full {
-	border-width: 1px;
-	max-width: 100%;
+  border-width: 1px;
+  max-width: 100%;
 }
 
 hr.red {
-	border-color: $red;
+  border-color: $red;
 }
 
 hr.golden {
-	border-color: $gold;
+  border-color: $gold;
 }
 
 hr.light {
-	border-color: #ddd;
+  border-color: #ddd;
 }
 
 header {
-	color: #fff;
-	background-size: cover;
-	background-position: center;
-	text-align: center;
-	width: 100%;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  width: 100%;
 }
 
 header.full {
-	height: 100%;
-	min-height: 100%;
+  height: 100%;
+  min-height: 100%;
 
-	.header-content {
-		position: absolute;
-		top: 35%;
-		width: 100%
-	}
+  .header-content {
+    position: absolute;
+    top: 30%;
+    width: 100%
+  }
 
-	.header-footer {
-		position: absolute;
-		bottom: 5%;
-		width: 100%;
-	}
+  .header-footer {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+  }
 }
 
 .centered-text {
-	text-align: center
+  text-align: center
 }
 
 /* Header Images */
 header.half {
-	padding-top: 128px;
-	padding-bottom: 128px;
+  padding-top: 128px;
+  padding-bottom: 128px;
 }
 
 header#home {
-	background-image: url(<%= asset_data_uri 'header/2015_nightmarket_wushu_l.jpg' %>);
+  background-image: url(<%= asset_data_uri 'header/2015_nightmarket_wushu_l.jpg' %>);
 }
 
 header#directions {
-	background-image: url(<%= asset_data_uri 'header/2015_nightmarket_wushu_l.jpg' %>);
+  background-image: url(<%= asset_data_uri 'header/2015_nightmarket_wushu_l.jpg' %>);
 }
 
 header#tickets {
-	background-image: url(<%= asset_data_uri 'header/2015_3189.jpg' %>);
+  background-image: url(<%= asset_data_uri 'header/2015_3189.jpg' %>);
 }
 
 header#about {
-	background-image: url(<%= asset_data_uri 'header/2015_3230.jpg' %>);
+  background-image: url(<%= asset_data_uri 'header/2015_3230.jpg' %>);
 }
 
 header#vendor {
-	background-image: url(<%= asset_data_uri 'header/2015_3199.jpg' %>);
+  background-image: url(<%= asset_data_uri 'header/2015_3199.jpg' %>);
 }
 
 header#group {
-	background-image: url(<%= asset_data_uri 'header/2015_3322.jpg' %>);
+  background-image: url(<%= asset_data_uri 'header/2015_3322.jpg' %>);
 }
 
 header#news {
-	@extend header#directions
+  @extend header#directions
 }
 
 section {
-	padding-top: 64px;
-	padding-bottom: 64px;
-	background-size: cover;
-	background-position: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-size: cover;
+  background-position: center;
 }
 
 section.admin-initial-content {
-	padding-top: 96px;
+  padding-top: 96px;
+}
+
+/* Buttons */
+.button-row {
+  .btn {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+}
+
+/* Links */
+.white-link {
+  a:link {
+    color: #fff;
+  }
+
+  a:visited {
+    color: #fff;
+  }
+
+  a:hover {
+    color: #ddd;
+  }
+
+  a:active {
+    color: #ddd;
+  }
 }
 
 /* Cards */
 .card-header-inverse {
-	color: #fff;
+  color: #fff;
 }
 
 /* Section Themes */
 section#home-introduction {
-	background-color: #222;
-	color: #fff;
+  background-color: #222;
+  color: #fff;
 }
 
 section#home-night-market-testimonial {
-	background-image: url(<%= asset_data_uri 'header/2015_nightmarket_tcsbooth_l.jpg' %>);
-	color: #fff;
-	padding-top: 256px;
-	padding-bottom: 256px;
+  background-image: url(<%= asset_data_uri 'header/2015_nightmarket_tcsbooth_l.jpg' %>);
+  color: #fff;
+  padding-top: 256px;
+  padding-bottom: 256px;
 }
 
 section#home-about {
-	background-color: #32004c;
-	color: #fff;
+  background-color: #32004c;
+  color: #fff;
 }
 
 .blockquote-footer {
-	color: $gold;
+  color: $gold;
 }
