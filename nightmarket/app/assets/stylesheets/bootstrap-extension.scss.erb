@@ -16,6 +16,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 
+.display-4 {
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
 hr {
   border-width: 3px;
   max-width: 50px;
