@@ -64,7 +64,19 @@ header.full {
   .header-content {
     position: absolute;
     top: 30%;
-    width: 100%
+    width: 100%;
+
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+      top: 15%;
+    }
+
+    @media screen and (min-width: 640px) and (max-width: 768px) and (orientation: landscape) {
+      top: 25%;
+    }
+
+    @media screen and (max-width: 768px) {
+      top: 25%;
+    }
   }
 
   .header-footer {
@@ -79,6 +91,12 @@ header.full {
 }
 
 /* Header Images */
+#night-market-main-logo {
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    display: none;
+  }
+}
+
 header.half {
   padding-top: 128px;
   padding-bottom: 128px;

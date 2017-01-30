@@ -1,7 +1,7 @@
 <hr class="full"/>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-2 col-xs-4 offset-lg-1">
+		<div class="col-lg-2 col-md-4 offset-lg-1">
 			<address class="small">
 				<strong>Stanford Night Market</strong><br />
 				Stanford Taiwanese Cultural Society<br />
@@ -10,7 +10,7 @@
 				Stanford, California 94305
 			</address>
 		</div>
-		<div class="col-lg-2 col-xs-4">
+		<div class="col-lg-2 col-md-4">
 			<p class="small"><strong>Navigation</strong><br />
 			<%= link_to "Home", controller: "visit", action: "index" %><br />
 			<%= link_to "Ticketing", controller: "visit", action: "tickets" %><br />
@@ -18,14 +18,14 @@
 			<%= link_to "Facebook Event", "/fb" %><br />
 			</p>
 		</div>
-		<div class="col-lg-2 col-xs-4">
+		<div class="col-lg-2 col-md-4">
 			<p class="small"><strong>Related Links</strong><br />
 			<%= link_to "Stanford Taiwanese Cultural Society", "https://taiwanese.stanford.edu/"%><br />
 			<%= link_to "Taiwanese Cultural Society on Facebook", "https://www.facebook.com/TaiwaneseCulturalSociety"%><br />
 			<%= link_to "Stanford Asian American Student Association", "http://aasa.stanford.edu/"%><br />
 			</p>
 		</div>
-		<div class="col-lg-2 col-xs-4">
+		<div class="col-lg-2 col-md-4">
 			<p class="small">
 				<% if current_user %>
 					Signed in as <strong><%= current_user.name %></strong>!<br />
