@@ -6,7 +6,7 @@ class StudentController < ApplicationController
   def post_registration
     @group = Group.new(group_params)
     @group.group_primary_email = @group.group_primary_email.downcase
-    @group.year_participated = "2017"
+    @group.year_participated = "2018"
     if @group.save
       redirect_to action: "registration_success"
     else

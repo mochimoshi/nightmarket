@@ -65,7 +65,7 @@ class AdminController < ApplicationController
     end
 
     @vendor = Vendor.find_by id: params[:id]
-    if @vendor.nil? and @vendor.year_participated != "2017"
+    if @vendor.nil? and @vendor.year_participated != "2018"
       flash[:error] = "Vendor not found"
       redirect_to action: "vendor"
       return
@@ -85,7 +85,7 @@ class AdminController < ApplicationController
     end
 
     @vendor = Vendor.find_by id: params[:id]
-    if @vendor.nil? and @vendor.year_participated != "2017"
+    if @vendor.nil? and @vendor.year_participated != "2018"
       flash[:error] = "Vendor not found"
       redirect_to action: "vendor"
       return
@@ -105,7 +105,7 @@ class AdminController < ApplicationController
     end
 
     @vendor = Vendor.find_by id: params[:id]
-    if @vendor.nil? and @vendor.year_participated != "2017"
+    if @vendor.nil? and @vendor.year_participated != "2018"
       flash[:error] = "Vendor not found"
       redirect_to action: "vendor"
       return
@@ -136,7 +136,7 @@ class AdminController < ApplicationController
     end
 
     @group = Group.find_by id: params[:id]
-    if @group.nil? and @group.year_participated != "2017"
+    if @group.nil? and @group.year_participated != "2018"
       flash[:error] = "Group not found"
       redirect_to action: "group"
       return
@@ -156,7 +156,7 @@ class AdminController < ApplicationController
     end
 
     @group = Group.find_by id: params[:id]
-    if @group.nil? and @vendor.year_participated != "2017"
+    if @group.nil? and @vendor.year_participated != "2018"
       flash[:error] = "Group not found"
       redirect_to action: "group"
       return
@@ -176,7 +176,7 @@ class AdminController < ApplicationController
     end
 
     @group = Group.find_by id: params[:id]
-    if @group.nil? and @group.year_participated != "2017"
+    if @group.nil? and @group.year_participated != "2018"
       flash[:error] = "Group not found"
       redirect_to action: "group"
       return

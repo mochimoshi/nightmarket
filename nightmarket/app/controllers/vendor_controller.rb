@@ -6,7 +6,7 @@ class VendorController < ApplicationController
   def post_registration
     @vendor = Vendor.new(vendor_params)
     @vendor.vendor_primary_email = @vendor.vendor_primary_email.downcase
-    @vendor.year_participated = "2017"
+    @vendor.year_participated = "2018"
     if @vendor.save
       redirect_to action: "registration_success"
     else
