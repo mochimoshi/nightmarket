@@ -1,5 +1,5 @@
 machine:
   ruby:
-    version: ruby-2.3.1
+    version: ruby-2.3.3
 general:
   build_dir: nightmarket
