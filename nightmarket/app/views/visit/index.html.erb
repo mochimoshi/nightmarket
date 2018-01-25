@@ -9,7 +9,7 @@
     <h1 class="display-4">2018 Stanford Night Market</h1>
     <hr class="golden" />
     <h1 class="display-4">Saturday, April 14 • 5 - 8:30pm</h1>
-    <p class="button-row"><%= link_to "RSVP on Facebook", "/fb", class: "btn btn-success" %> <%= link_to "Student Performance Registration", {controller: "student", action: "registration" }, class: "btn btn-primary" %></p>
+    <p class="button-row"><%= link_to "RSVP on Facebook", "/fb", class: "btn btn-success" %> <%= link_to "Student Performance Registration", {controller: "student", action: "registration" }, class: "btn btn-primary" %> <%= link_to "Vendor Registration", {controller: "vendor", action: "index" }, class: "btn btn-primary" %> </p>
   </div>
   <div class="header-footer">
     <% if flash[:error] == "unauthorized_domain" or flash[:error] == "logged_out" %>

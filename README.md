@@ -43,4 +43,4 @@ Now, go into the project directory and also run `bundle install`. (You may need 
 
 You will need to set up Ruby environmental variables for Google Signin. You can create an app at the [Google Development Console](https://console.developers.google.com).
 
-When that is all done, create your test databases with `rake db:create` and "rake db:migrate", create assets with `rake assets:precompile` and then run `rails server` to access your site on [localhost:3000](http://localhost:3000). You did it!
+When that is all done, create your test databases with `rake db:create` and `rake db:migrate`, create assets with `rake assets:precompile` and then run `rails server` to access your site on [localhost:3000](http://localhost:3000). You did it!
