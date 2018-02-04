@@ -59,10 +59,12 @@ ActiveRecord::Schema.define(version: 20170127080911) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.string   "vendor_name"
+    t.string   "vendor_package"
     t.string   "vendor_address"
     t.string   "vendor_primary_name"
     t.string   "vendor_primary_email"
     t.string   "vendor_primary_phone"
+    t.string   "vendor_preferred_contact"
     t.string   "vendor_secondary_name"
     t.string   "vendor_secondary_email"
     t.string   "vendor_secondary_phone"

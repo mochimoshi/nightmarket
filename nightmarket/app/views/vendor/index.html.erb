@@ -11,8 +11,7 @@
     <div class="row">
       <div class="col-lg-10 offset-lg-1">
         <h1>2018 Stanford Night Market Vendor Registration</h1>
-        <h2>Already registered?</h2>
-        <p>You can <%= link_to 'log in here', action: "login"%>!</p>
+        <p><i>Already registered? You can <%= link_to 'log in here', action: "login"%>!</i></p>
         <% if @vendor.errors.any? %>
           <div class="alert alert-danger">
             <p class="lead">Whoops! Something happened!</p>
@@ -21,175 +20,289 @@
             <% end %>
           </div>
         <% end %>
-        <p class="lead">Thank you for your interest in participating in the 2018 Stanford Night Market</p>
-        <p>The Stanford Night Market is an annual event hosted by the Taiwanese Cultural Society at Stanford University to celebrate Asian culture and community. There will be food, performances, and games, reminiscent of Taiwan’s vibrant night life. Night Market is also an opportunity to bring together the entire community, both student groups and members of the Bay Area. The Stanford Night Market is one of the many successful student-run night markets through the United States via the Intercollegiate Taiwanese-American Student Association.</p>
+<!--         <p class="lead">Thank you for your interest in participating in the 2018 Stanford Night Market</p>
+ -->        <h2>What is Stanford Night Market?</h2>
+        <p>Stanford Night Market is an annual event hosted by the Taiwanese Cultural Society to celebrate Asian culture and community. There will be food, performances, and games, reminiscent of Taiwan’s vibrant nightlife. Night Market is also an opportunity to bring together the entire community, both student groups and members of the Bay Area. The Stanford Night Market is one of the many successful student-run night markets through the United States via the Intercollegiate Taiwanese-American Student Association.</p>
         <h2>Why participate in the Stanford Night Market?</h2>
         <ul>
-          <li>One of the largest night market events between Los Angeles and Seattle</li>
+          <li>Largest night market event between Los Angeles and Seattle</li>
           <li>Targeted toward students and young adults</li>
-          <li>Rapidly growing event with over 200% increase in attendence each year</li>
+          <li>Rapidly growing event with more than a 200% increase in attendance each year</li>
           <li>Low cost of entry without long term leases or expensive licenses</li>
-          <li>Join an event that supports local businesses and entrepreneurs!</li>
-          <li>Be associated with an event showcasing local causes and talent!</li>
+          <li>Join an event that supports local businesses and entrepreneurs</li>
+          <li>Be associated with an event showcasing local causes and talent</li>
         </ul>
-        <h2>Event Information</h2>
-        <p>The Stanford Night Market will be held at <strong>White Plaza, Stanford University, Stanford, California on April 14 from 5 to 8:30 pm</strong>. The expected attendence is over 3000 people!</p>
-        <h2>Vendor Package</h2>
-        <p><strong>Vendor packages will be $260 for the 2018 Stanford Night Market.</strong>The following is included in a vendor package:</p>
-        <ul>
-          <li>10' x 10' canopy tent on a smooth asphalt surface</li>
-          <li>8 ft table, 1 chair</li>
-          <li>Temporary event health permit</li>
-          <li>Marketing on campus, and in the South Bay and Peninsula</li>
-          <li>2 11" x 17" posters for marketing. More is available on request.</li>
-        </ul>
-        <h3>Frequently Asked Questions</h3>
-        <h4>What permits are needed?</h4>
-        <p><strong>There are two permits required: a temporary seller's permit (which must be registered at <%= link_to 'https://efile.boe.ca.gov/ereg/index.boe', 'https://efile.boe.ca.gov/ereg/index.boe' %>) and a temporary event health permit, included as part of the package.</strong> California requires all vendors to apply for a temporary seller’s permit with the California Board of Equalization - a permit for sales of taxable items. Registration is free and can be done at <%= link_to 'https://efile.boe.ca.gov/ereg/index.boe', 'https://efile.boe.ca.gov/ereg/index.boe' %>. <strong>Please mail a copy to us once you are done!</strong> Please use the following address for the temporary special event:</p>
-        <address>
-          519 Lasuen Mall<br />
-          Stanford University<br />
-          Stanford, CA 94305<br />
-        </address>
-        <p>A food sales permit will be provided as part of the package. <strong>No cooking is allowed on site. All food preparation must be performed at a health department approved commercial kitchen</strong> - we highly encourage preparing the food at your own facilities, then selling prepackaged food at the event for simplicity. <strong>Please provide a copy of your restaurant facility permit as well.</strong> This is required as part of the temporary health permit. Please note that potentially hazardous foods (e.g. meat, dairy) need to be kept below 45 degrees Fahrenheit or above 135 degrees Fahrenheit through heating elements or cooling containers.</p>
-        <h4>Are alcohol sales allowed?</h4>
-        <p>Alcohol sales are not allowed at the Stanford Night Market.</p>
-        <h4>How does the ticketing system work?</h4>
-        <p>To reduce the problem of dealing with money and change, visitors will use tickets (priced at 50 cents each) to purchase items. We will exchange tickets for either the cash or check amount at the end of the event. You are entitled to 100% of any profits made by your booth.</p>
-        <h4>What are the cooking regulations?</h4>
+
+        <h2 data-toggle="collapse" data-target="#event-information" class="clickable" style="cursor: pointer">Event Information</h2>
+        <div id="event-information" class="collapse in">
+          <p><strong>Location:</strong> White Plaza, Stanford University — Stanford, California</p>
+          <p><strong>Date and time:</strong> Saturday, April 14 from 5 to 8:30 pm. </p>
+          <p><strong>Expected attendance:</strong> 1200-1600+ people</p>
+        </div>
+
+        <h2 data-toggle="collapse" data-target="#vendor-package-options" class="clickable" style="cursor: pointer">Vendor Package Options</h2>
+        <div id="vendor-package-options" class="collapse in">
+          <h3><strong>Prepaid package — $260</strong></h3>
+          <i>Details:</i>
+          <ul>
+            <li>Includes 10’ x 10’ canopy tent, 8’ table, 2 chairs</li>
+            <li>Temporary event health permit</li>
+            <li>Requires free seller's permit registration</li>
+            <li>Marketing in the South Bay and Peninsula</li>
+            <li>Two 11" x 17" posters for marketing (More available upon request.)</li>
+          </ul>
+          <i>Best for:</i>
+          <ul>
+            <li>Vendors with staff available to sell food directly at the Night Market</li>
+            <li>Vendors with large amounts of food available to bring to the event</li>
+          </ul>
+          <h3><strong>Bulk sales - no fee</strong></h3>
+          <i>Details:</i>
+          <ul>
+            <li>Stanford student groups will directly purchase and pick up food in bulk at a discounted price from your restaurant; the amount of food will be determined by student groups</li>
+            <li>All food must be prepared and packaged according to health regulations outlined below</li>
+            <li>Student organizations are reserved the right to profits from reselling the food at the Night Market</li>
+          </ul>
+          <i>Best for:</i>
+          <ul>
+            <li>Vendors with fewer staff members and are unable to directly sell food at the Night Market</li>
+            <li>Vendors interested in selling bulk quantities of easily transportable food</li>
+          </ul>
+        </div>
+
+        <h2 data-toggle="collapse" data-target="#faq-text" class="clickable" style="cursor: pointer">Frequently Asked Questions</h2>
+        <div id="faq-text" class="collapse in">
+          <h4>What permits are needed?</h4>
+          <p><strong>The vendor package includes a temporary event health permit. Additionally, please provide a copy of your restaurant facility permit and a temporary seller’s permit. California requires all vendors to apply for a temporary seller’s permit with the California Board of Equalization (a permit for sales of taxable items). Registration is free and can be done at <%= link_to 'https://efile.boe.ca.gov/ereg/index.boe', 'https://efile.boe.ca.gov/ereg/index.boe' %>. </strong></p>
+          <!-- <p>A food sales permit will be provided as part of the package. <strong>No cooking is allowed on site. All food preparation must be performed at a health department approved commercial kitchen</strong> - we highly encourage preparing the food at your own facilities, then selling prepackaged food at the event for simplicity. <strong>Please provide a copy of your restaurant facility permit as well.</strong> This is required as part of the temporary health permit. Please note that potentially hazardous foods (e.g. meat, dairy) need to be kept below 45 degrees Fahrenheit or above 135 degrees Fahrenheit through heating elements or cooling containers.</p> -->
+
+          <h4>What does the prepaid vendor package not include?</h4>
+          <p>Vendors are responsible for their own chafing dishes and heating supplies, banners and signage, any additional tables.</p>
+
+          <h4>Is there a certain way that food must be prepared?</h4>
+          <p>No cooking is allowed on site. All food preparation must be performed at a health department approved commercial kitchen. Please note that potentially hazardous foods (e.g. meat, dairy) need to be kept below 45 degrees Fahrenheit or above 135 degrees Fahrenheit through heating elements or cooling containers. In accordance with health regulations of the state of California, food must be purchased and consumed within four hours of cooking/preparation even if the food is stored and reheated later.</p>
+
+
+          <h4>Is there a certain way that food must be served?</h4>
+          <p>All food must be individually packaged (in a sealed bag, box, or other container) prior to the event, in a certified facility (e.g. approved commercial kitchen). All packaged food must have a label for the time at which it was packaged, and must be purchased and consumed within four hours of that timestamp.  No food can be in open containers or exposed to air until after it has been sold to consumers.</p>
+
+          <h4>Will there be a space for waste disposal?</h4>
+          <p>Stanford Night Market provides general waste disposal. Dumping oil or other cooking materials onto grass or public spaces is strictly prohibited.</p>
+
+          <h4>Are alcohol sales allowed?</h4>
+          <p>Alcohol sales are not allowed at the Stanford Night Market.</p>
+
+          <h4>How should items be priced?</h4>
+          <p>Prices should reflect reasonable market rates. Night markets are known for having great bargains, and customers are price sensitive. We recommend selling in volume at lower prices. The Stanford Night Market reserves the right to set a maximum price as necessary.</p>
+
+
+
+<!--         <h4>What are the cooking regulations?</h4>
         <p>Please cover open cooking equipment to avoid contamination. We will provide containers to dump out used oil. <strong>Dumping oil on the ground or grass is strictly prohibited, and you will be fined if there are stains or destruction of property in your booth space.</strong> Since tent space is limited, cooking should be done at a separate, health department approved commerical facility, then transporting prepackaged food to Night Market to sell.</p>
+ -->
+<!-- 
         <h4>Will there be water available for cooking or drinking?</h4>
         <p>Vendors are responsible for their own chafing dishes and heating supplies, lights, banners and signage, additional tables, as well as five gallons of 100°F warm water for hand washing.</p>
-        <h4>How should items be priced?</h4>
-        <p>Prices should reflect reasonable market rates. Night markets are known for having great bargains, and customers are price sensitive. We recommend selling in volume at lower prices. The Stanford Night Market reserves the right to set a maximum price as necessary.</p>
-        <h4>Who should I contact if I have any more questions?</h4>
-        <p>Contact information goes here</p>
-        <h3>Thank you! Best of luck, and we hope to see you soon!</h3>
-        <p>The Taiwanese Cultural Society at Stanford University</p>
+ -->
 
-        <h3>Vendor Registration</h3>
-        <p>All information that you submit here can be changed up until <strong>February 11 at 9PM</strong> - please let us know before then if you need to modify or cancel your registration. Please note that the above agreement may change. Thank you!</p>
-        <%= form_for :vendor, method: :post, url: {action: :post_registration}, html: {role: "form"} do |f| %>
-          <fieldset>
-            <legend>Basic Information (Required)</legend>
-          </fieldset>
-          <div class="form-group row">
-            <label for="vendor-name" class="col-sm-2 col-form-label">Business Name</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_name, class: "form-control", id: "vendor-name", placeholder: "e.g. Taiwanese Cultural Society" %>
+          <h4>Questions can be emailed to  Stanford Night Market coordinators:</h4>
+          <p><strong>Rosalie Chang</strong>, Night Market Chair </br>
+          rosaliec at stanford.edu </br>
+          <strong><i>General questions about the event</i></strong></p>
+
+          <p><strong>Vivian Xiao</strong>, Off-Campus Coordinator </br>
+          vxiao at stanford.edu </br>
+          <strong><i>Questions regarding vendor registration or health regulations</i></strong></p>
+
+          <p><strong>Daniel Classon</strong>, Logistics Coordinator</br>
+          dclasson at stanford.edu </br>
+          <strong><i>Questions regarding payment and financing</i></strong></p>
+
+          <p><strong>Rosalie Chang</strong>, Night Market Chair</br>
+          rosaliec at stanford.edu </br>
+          <strong><i>General questions about the event</i></strong></p>
+
+          <p><strong>Andrea Lim</strong>, Marketing Coordinator</br>
+          anlim at stanford.edu </br>
+          <strong><i>Questions regarding publicity and marketing</i></strong></p>
+
+          <h4>We look forward to working with you!</h4>
+          <p>—The Taiwanese Cultural Society at Stanford University</p>
+
+        </div>
+
+        <h2 data-toggle="collapse" data-target="#vendor-registration" class="clickable" style="cursor: pointer">Vendor Registration</h2>
+        <div id="vendor-registration" class="collapse in">
+          <h3>Please register before February 25th</h3>
+          <p>E-mail vxiao at stanford.edu if you need to modify or cancel your registration.</p>
+
+          <p>All information that you submit here can be changed up until <strong>February 25 at 9PM</strong> - please let us know before then if you need to modify or cancel your registration. Please note that the above agreement may change. Thank you!</p>
+          <%= form_for :vendor, method: :post, url: {action: :post_registration}, html: {role: "form"} do |f| %>
+            <fieldset>
+              <legend>Vendor Package (Required)</legend>
+            </fieldset>
+            <div class="form-group row">
+              <div class="radio col-sm-10">
+                <%= f.radio_button :vendor_package, class: "form-control", id: "vendor-package-prepaid"%> Prepaid package ($260)
+              </div>
+
+              <div class="radio col-sm-10">
+                <%= f.radio_button :vendor_package, class: "form-control", id: "vendor-package-bulk"%> Bulk package (no fee)
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-address" class="col-sm-2 col-form-label">Business Address</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_address, class: "form-control", id: "vendor-address", placeholder: "e.g. 541 Lasuen Mall, Ste. 200, Stanford, CA 94305" %>
-              <p class="form-text text-muted">Please provide the full address where your restaurant is registered (house number, street number, city, state, ZIP, et cetera.)</p>
+
+            <fieldset>
+              <legend>Basic Information (Required)</legend>
+            </fieldset>
+            <div class="form-group row">
+              <label for="vendor-name" class="col-sm-2 col-form-label">Business Name</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_name, class: "form-control", id: "vendor-name", placeholder: "e.g. Taiwanese Cultural Society" %>
+              </div>
             </div>
-          </div>
-          <fieldset>
-            <legend>Primary Contact (Required)</legend>
-          </fieldset>
-          <div class="form-group row">
-            <label for="vendor-primary-name" class="col-sm-2 col-form-label">Primary Contact Person</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_primary_name, class: "form-control", id: "vendor-primary-name", placeholder: "e.g. John Doe" %>
+            <div class="form-group row">
+              <label for="vendor-address" class="col-sm-2 col-form-label">Business Address</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_address, class: "form-control", id: "vendor-address", placeholder: "e.g. 541 Lasuen Mall, Ste. 200, Stanford, CA 94305" %>
+                <p class="form-text text-muted">Please provide the full address where your restaurant is registered (house number, street number, city, state, ZIP, et cetera.)</p>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-primary-email" class="col-sm-2 col-form-label">Primary Contact E-mail</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_primary_email, class: "form-control", id: "vendor-primary-email", placeholder: "e.g. jdoe@stanford.edu" %>
-              <p class="form-text text-muted">This is used as your login username.</p>
+
+            <fieldset>
+              <legend>Primary Contact (Required)</legend>
+            </fieldset>
+            <div class="form-group row">
+              <label for="vendor-primary-name" class="col-sm-2 col-form-label">Primary Contact Name</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_primary_name, class: "form-control", id: "vendor-primary-name", placeholder: "e.g. John Doe" %>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-primary-phone" class="col-sm-2 col-form-label">Primary Contact Phone Number</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_primary_phone, class: "form-control", id: "vendor-primary-phone", placeholder: "e.g. 408.555.5555" %>
+            <div class="form-group row">
+              <label for="vendor-primary-email" class="col-sm-2 col-form-label">Primary Contact E-mail</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_primary_email, class: "form-control", id: "vendor-primary-email", placeholder: "e.g. jdoe@stanford.edu" %>
+                <p class="form-text text-muted">This is used as your login username.</p>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-password" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-              <%= f.password_field :pass, class: "form-control", id: "vendor-password", placeholder: "Password (6 - 64 characters, please!)" %>
+            <div class="form-group row">
+              <label for="vendor-primary-phone" class="col-sm-2 col-form-label">Primary Contact Phone Number</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_primary_phone, class: "form-control", id: "vendor-primary-phone", placeholder: "e.g. 408.555.5555" %>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-password-confirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
-            <div class="col-sm-10">
-              <%= f.password_field :pass_confirmation, class: "form-control", id: "vendor-password-confirmation", placeholder: "Password Confirmation" %>
+            <div class="form-group row">
+              <label for="vendor-preferred-contact" class="col-sm-2 col-form-label">Preferred Contact Method</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_preferred_contact, class: "form-control", id: "vendor-preferred-contact", placeholder: "e.g. email, phone" %>
+              </div>
             </div>
-          </div>
-          <fieldset>
-            <legend>Secondary Contact (Optional)</legend>
-          </fieldset>
-          <div class="form-group row">
-            <label for="vendor-secondary-name" class="col-sm-2 col-form-label">Secondary Contact Person</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_secondary_name, class: "form-control", id: "vendor-secondary-name", placeholder: "e.g. Jane Doe" %>
+            <div class="form-group row">
+              <label for="vendor-password" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <%= f.password_field :pass, class: "form-control", id: "vendor-password", placeholder: "Password (6 - 64 characters, please!)" %>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-secondary-email" class="col-sm-2 col-form-label">Secondary Contact E-mail</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_secondary_email, class: "form-control", id: "vendor-secondary-email", placeholder: "e.g. jadoe@stanford.edu" %>
+            <div class="form-group row">
+              <label for="vendor-password-confirmation" class="col-sm-2 col-form-label">Password Confirmation</label>
+              <div class="col-sm-10">
+                <%= f.password_field :pass_confirmation, class: "form-control", id: "vendor-password-confirmation", placeholder: "Password Confirmation" %>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-secondary-phone" class="col-sm-2 col-form-label">Secondary Contact Phone Number</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_secondary_phone, class: "form-control", id: "vendor-secondary-phone", placeholder: "e.g. 408.555.5555" %>
+
+            <fieldset>
+              <legend>Secondary Contact (Optional)</legend>
+            </fieldset>
+            <div class="form-group row">
+              <label for="vendor-secondary-name" class="col-sm-2 col-form-label">Secondary Contact Person</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_secondary_name, class: "form-control", id: "vendor-secondary-name", placeholder: "e.g. Jane Doe" %>
+              </div>
             </div>
-          </div>
-          <fieldset>
-            <legend>Booth Information</legend>
-          </fieldset>
-          <div class="form-group row">
-            <label for="vendor-food-information" class="col-sm-2 col-form-label">Food description (Required)</label>
-            <div class="col-sm-10">
-              <%= f.text_area :vendor_food_information, class: "form-control", id: "vendor-food-information", rows: 5, placeholder: "e.g. We are planning to sell pearl milk tea in the following flavors: original, oolong, and taro." %>
-              <p class="form-text text-muted">Please let us know what you are selling! All food has to be pre-packaged individually - that is, you directly hand them a cup, bag, or some other container instead of serving it on the spot. Let us know if you have any questions here as well. Thank you for your understanding!</p>
+            <div class="form-group row">
+              <label for="vendor-secondary-email" class="col-sm-2 col-form-label">Secondary Contact E-mail</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_secondary_email, class: "form-control", id: "vendor-secondary-email", placeholder: "e.g. jadoe@stanford.edu" %>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-business-information" class="col-sm-2 col-form-label">Business description (Required)</label>
-            <div class="col-sm-10">
-              <%= f.text_area :vendor_description, class: "form-control", id: "vendor-business-information", rows: 5, placeholder: "e.g. The Stanford Night Market was founded in 1994 and aims to connect people to the beauty of Taiwanese culture..." %>
-              <p class="form-text text-muted">Please put a small blurb about the restaurant (history, specialties, for instance)! This is for publicity purposes - we will feature vendors and their information on our website. Generally 1 - 2 short paragraphs would be great!</p>
+            <div class="form-group row">
+              <label for="vendor-secondary-phone" class="col-sm-2 col-form-label">Secondary Contact Phone Number</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_secondary_phone, class: "form-control", id: "vendor-secondary-phone", placeholder: "e.g. 408.555.5555" %>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-website" class="col-sm-2 col-form-label">Business website (Optional)</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_website, class: "form-control", id: "vendor-website", placeholder: "e.g. taiwanese.stanford.edu" %>
+
+            <fieldset>
+              <legend>Booth Information</legend>
+            </fieldset>
+            <div class="form-group row">
+              <label for="vendor-food-information" class="col-sm-2 col-form-label">Food description (Required)</label>
+              <div class="col-sm-10">
+                <%= f.text_area :vendor_food_information, class: "form-control", id: "vendor-food-information", rows: 5, placeholder: "e.g. We can sell stir fry noodles for $4.50/serving (50 servings), fried rice for $4.00/serving (50 servings), and fried dumpling for $3.50/serving (40 servings)." %>
+                <p class="form-text text-muted">Please let us know what you are able to prepare and sell along with approximate prices. All food must be pre-packaged individually (i.e. single serving size sealed box, cup, bag, or other container) and must come labelled with the time that it was packaged. Let us know if you have any questions about your food here.</p>
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <label for="vendor-photo" class="col-sm-2 col-form-label">Business photo (Optional)</label>
-            <div class="col-sm-10">
-              <%= f.text_field :vendor_photo, class: "form-control", id: "vendor-photo", placeholder: "e.g. https://www.flickr.com/photos/128195661@N08/16920803364/" %>
-              <p class="form-text text-muted">Please submit a link to a photo of your business (or e-mail us!) for publicity purposes! Images should be at least 1024px wide and 700px high.</p>
+            <div class="form-group row">
+              <label for="vendor-business-information" class="col-sm-2 col-form-label">Business description (Required)</label>
+              <div class="col-sm-10">
+                <%= f.text_area :vendor_description, class: "form-control", id: "vendor-business-information", rows: 5, placeholder: "e.g. The Stanford Night Market was founded in 1994 and aims to connect people to the beauty of Taiwanese culture..." %>
+                <p class="form-text text-muted">Please enter a small blurb (one to two short paragraphs) about your restaurant (i.e. history, specialties, or anything you deem relevant!). This is for publicity purposes as we will feature vendors and their information on our website.</p>
+              </div>
             </div>
-          </div>
-          <fieldset>
-            <legend>Terms and Conditions</legend>
-          </fieldset>
-          <div class="form-group row">
-            <div class="offset-sm-2 col-sm-10">
-              <div class="form-check">
-                <div class="form-check-label">
-                  <%= f.check_box :agreement, checked: false, id: "inputAgreement", class: 'form-check-input' %>By checking this box, I agree to the terms set above.
-                </div>
+            <div class="form-group row">
+              <label for="vendor-website" class="col-sm-2 col-form-label">Business website (Optional)</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_website, class: "form-control", id: "vendor-website", placeholder: "e.g. taiwanese.stanford.edu" %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="vendor-photo" class="col-sm-2 col-form-label">Business photo (Optional)</label>
+              <div class="col-sm-10">
+                <%= f.text_field :vendor_photo, class: "form-control", id: "vendor-photo", placeholder: "e.g. https://www.flickr.com/photos/128195661@N08/16920803364/" %>
+                <p class="form-text text-muted">Please submit a link to a photo of your business for publicity purposes. Vendors may also email a photo to anlim at stanford.edu. Images should be at least 1024 x 700 (width by height).</p>
               </div>
             </div>
           </div>
-          <div class="form-group row">
-            <div class="offset-sm-2 col-sm-10">
-<!--               <p class="form-control-static">Vendor registration has ended for the 2018 Night Market. We look forward to working with you for next year's event!</p>
- -->            </div>
+
+
+        <fieldset>
+          <legend>Seller's Permit Registration (only for prepaid package)</legend>
+        </fieldset>
+        <div>
+          <p>The prepaid vendor package includes a health permit, but vendors must submit their information to receive a seller’s permit. <strong>This is required for the event, but it is free to register for a seller’s permit.</strong></p> 
+
+          <p><strong>Please follow these steps</strong> to complete your registration. Thank you!</p>
+
+          <ul>
+          <li>Go to <%= link_to 'https://efile.boe.ca.gov/ereg/index.boe', 'https://efile.boe.ca.gov/ereg/index.boe' %> and fill out the form.</li>
+          <li>Use the following address for the temporary special event:</br>
+            <i>519 Lasuen Mall</br>
+            Stanford University</br>
+            Stanford, CA 94305</i>
+          </li>
+          <li>Email your completed form to vxiao at stanford.edu.</li>
+          </ul>
+        </div>
+
+        <fieldset>
+          <legend>Terms and Conditions</legend>
+        </fieldset>
+        <div class="form-group row">
+          <div class="offset-sm-2 col-sm-10">
+            <div class="form-check">
+              <div class="form-check-label">
+                <%= f.check_box :agreement, checked: false, id: "inputAgreement", class: 'form-check-input' %>By checking this box, I agree to the terms set above. If selecting the prepaid vendor package, by checking this box, I also confirm that I will register/have registered for a seller’s permit on behalf on my restaurant.
+              </div>
+            </div>
           </div>
-         <% end %>
-       </div>
+        </div>
+        <div class="form-group row">
+          <div class="offset-sm-2 col-sm-10">
+            <%= submit_tag "Submit", class: "btn btn-primary" %>
+          </div>
+        </div>
+       <% end %>
+      <p><strong>If you have selected the prepaid package</strong>, you will be contacted soon by Stanford Night Market to confirm your registration.</br>
+      <strong>If you have selected the bulk sales package</strong>, you will be contacted soon by a student organization interested in purchasing bulk foods.</p>
     </div>
   </div>
 </section>
