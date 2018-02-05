@@ -136,16 +136,15 @@
           <%= form_for :vendor, method: :post, url: {action: :post_registration}, html: {role: "form"} do |f| %>
             <fieldset>
               <legend>Vendor Package (Required)</legend>
+              <div class="form-group row">
+                <div class="radio col-sm-10">
+                  <%= f.radio_button :vendor_package, 'prepaid' %> 
+                  <%= label :vendor_package, 'Prepaid package ($260)', :value => 'prepaid' %>
+                  <%= f.radio_button :vendor_package, 'bulk' %>
+                  <%= label :vendor_package, 'Bulk package (no fee)', :value => 'bulk'%>
+                </div>
+              </div>
             </fieldset>
-            <div class="form-group row">
-              <div class="radio col-sm-10">
-                <%= f.radio_button :vendor_package, class: "form-control", id: "vendor-package-prepaid"%> Prepaid package ($260)
-              </div>
-
-              <div class="radio col-sm-10">
-                <%= f.radio_button :vendor_package, class: "form-control", id: "vendor-package-bulk"%> Bulk package (no fee)
-              </div>
-            </div>
 
             <fieldset>
               <legend>Basic Information (Required)</legend>
@@ -257,8 +256,6 @@
                 <p class="form-text text-muted">Please submit a link to a photo of your business for publicity purposes. Vendors may also email a photo to anlim at stanford.edu. Images should be at least 1024 x 700 (width by height).</p>
               </div>
             </div>
-          </div>
-
 
         <fieldset>
           <legend>Seller's Permit Registration (only for prepaid package)</legend>
@@ -297,6 +294,9 @@
           </div>
         </div>
        <% end %>
+
+       </div>
+
       <p><strong>If you have selected the prepaid package</strong>, you will be contacted soon by Stanford Night Market to confirm your registration.</br>
       <strong>If you have selected the bulk sales package</strong>, you will be contacted soon by a student organization interested in purchasing bulk foods.</p>
     </div>

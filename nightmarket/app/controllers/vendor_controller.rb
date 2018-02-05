@@ -63,10 +63,10 @@ class VendorController < ApplicationController
   def vendor_params
     params.require(:vendor).permit(:vendor_name, 
       :vendor_address,
-      :vendor_package,
       :vendor_primary_email,
       :vendor_primary_phone,
       :vendor_primary_name,
+      :vendor_package,
       :vendor_preferred_contact,
       :vendor_preferred_contact,
       :vendor_secondary_phone,
