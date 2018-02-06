@@ -135,16 +135,6 @@
           <p>All information that you submit here can be changed up until <strong>February 25 at 9PM</strong> - please let us know before then if you need to modify or cancel your registration. Please note that the above agreement may change. Thank you!</p>
           <%= form_for :vendor, method: :post, url: {action: :post_registration}, html: {role: "form"} do |f| %>
             <fieldset>
-              <legend>Vendor Package (Required)</legend>
-              <div class="form-group row">
-                <div class="radio col-sm-10">
-                  <%= f.radio_button :vendor_package, 'prepaid', id: "vendor-package-prepaid", :value => 'prepaid' %> Prepaid package ($260)
-                  <%= f.radio_button :vendor_package, 'bulk', id: "vendor-package-bulk", :value => 'bulk'%> Bulk package (no fee)
-                </div>
-              </div>
-            </fieldset>
-
-            <fieldset>
               <legend>Basic Information (Required)</legend>
             </fieldset>
             <div class="form-group row">
@@ -160,6 +150,16 @@
                 <p class="form-text text-muted">Please provide the full address where your restaurant is registered (house number, street number, city, state, ZIP, et cetera.)</p>
               </div>
             </div>
+
+            <fieldset>
+              <legend>Vendor Package (Required)</legend>
+            </fieldset>
+              <div class="form-group row">
+                <div class="radio col-sm-10">
+                  <%= f.radio_button :vendor_package, 'prepaid', id: "vendor-package-prepaid", :value => 'prepaid' %> Prepaid package ($260)
+                  <%= f.radio_button :vendor_package, 'bulk', id: "vendor-package-bulk", :value => 'bulk'%> Bulk package (no fee)
+                </div>
+              </div>
 
             <fieldset>
               <legend>Primary Contact (Required)</legend>
