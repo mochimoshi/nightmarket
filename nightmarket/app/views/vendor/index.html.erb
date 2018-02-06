@@ -138,10 +138,8 @@
               <legend>Vendor Package (Required)</legend>
               <div class="form-group row">
                 <div class="radio col-sm-10">
-                  <%= f.radio_button :vendor_package, 'prepaid' %> 
-                  <%= label :vendor_package, 'Prepaid package ($260)', :value => 'prepaid' %>
-                  <%= f.radio_button :vendor_package, 'bulk' %>
-                  <%= label :vendor_package, 'Bulk package (no fee)', :value => 'bulk'%>
+                  <%= f.radio_button :vendor_package, 'prepaid', id: "vendor-package-prepaid", :value => 'prepaid' %> Prepaid package ($260)
+                  <%= f.radio_button :vendor_package, 'bulk', id: "vendor-package-bulk", :value => 'bulk'%> Bulk package (no fee)
                 </div>
               </div>
             </fieldset>
